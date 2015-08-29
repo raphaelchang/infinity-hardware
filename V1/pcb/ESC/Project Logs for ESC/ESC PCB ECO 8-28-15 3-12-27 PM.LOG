@@ -1,0 +1,5 @@
+Added Component: Designator=U3(SOT-223-DB3_M)
+Added Pin To Net: NetName=SL_C Pin=U3-1
+Added Pin To Net: NetName=VCC Pin=U3-2
+Added Pin To Net: NetName=5V Pin=U3-3
+Added Member To Class: ClassName=U_Power Member=Component U3 TC2117

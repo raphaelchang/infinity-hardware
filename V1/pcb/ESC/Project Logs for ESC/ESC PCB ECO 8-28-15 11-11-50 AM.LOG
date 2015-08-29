@@ -1,0 +1,23 @@
+Removed Pin From Net: NetName=NetU1_5 Pin=U1-5
+Removed Pin From Net: NetName=NetR24_2 Pin=U1-6
+Removed Pin From Net: NetName=OCTW Pin=U1-12
+Removed Pin From Net: NetName=FAULT Pin=U1-13
+Removed Pin From Net: NetName=NetC33_1 Pin=U1-14/A0
+Removed Pin From Net: NetName=SO2 Pin=U1-15/A1
+Removed Pin From Net: NetName=SO1 Pin=U1-16/A2
+Removed Pin From Net: NetName=NetR26_2 Pin=U1-17/A3
+Change Component DesignItemId : Designator=U1 Old DesignItemId=TEENSY_3.0_BASIC New DesignItemId=TEENSY_3.0_ALLANALOGPINS
+Change Component Footprint: Designator=U1 Old Footprint=TEENSY_3.0_BASIC New Footprint=TEENSY_3.0_ALLANALOG
+Added Pin To Net: NetName=NetR24_2 Pin=U1-5
+Added Pin To Net: NetName=NetU1_5 Pin=U1-6
+Added Pin To Net: NetName=NetR26_2 Pin=U1-12
+Added Pin To Net: NetName=PWRGD Pin=U1-14/A0
+Added Pin To Net: NetName=FAULT Pin=U1-15/A1
+Added Pin To Net: NetName=OCTW Pin=U1-16/A2
+Added Pin To Net: NetName=NetC33_1 Pin=U1-17/A3
+Added Pin To Net: NetName=SO1 Pin=U1-A10
+Added Pin To Net: NetName=SO2 Pin=U1-A11
+Change Net Name : Old Net Name=NetU1_5 New Net Name=NetU1_6
+Added Room: Name=ESC
+Added Room: Name=U_MCU
+Added Room: Name=U_Power

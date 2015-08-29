@@ -1,0 +1,92 @@
+Added Component: Designator=R6(Shunt)
+Added Component: Designator=R7(Shunt)
+Added Component: Designator=U1(TEENSY_3.0_BASIC)
+Added Component: Designator=U2(DCA56_6P35X3P61)
+Added Pin To Net: NetName=SL_C Pin=R6-1
+Added Pin To Net: NetName=SL_A Pin=R6-2
+Added Pin To Net: NetName=SL_C Pin=R7-1
+Added Pin To Net: NetName=SL_B Pin=R7-2
+Added Pin To Net: NetName=DIO Pin=U1-0
+Added Pin To Net: NetName=CLK Pin=U1-1
+Added Pin To Net: NetName=CS Pin=U1-2
+Added Pin To Net: NetName=QUAD_A Pin=U1-3
+Added Pin To Net: NetName=QUAD_B Pin=U1-4
+Added Pin To Net: NetName=NetU1_5 Pin=U1-5
+Added Pin To Net: NetName=NetR24_2 Pin=U1-6
+Added Pin To Net: NetName=SER_RX Pin=U1-7
+Added Pin To Net: NetName=SER_TX Pin=U1-8
+Added Pin To Net: NetName=NetU1_9 Pin=U1-9
+Added Pin To Net: NetName=NetU1_10 Pin=U1-10
+Added Pin To Net: NetName=NetR25_2 Pin=U1-11
+Added Pin To Net: NetName=OCTW Pin=U1-12
+Added Pin To Net: NetName=FAULT Pin=U1-13
+Added Pin To Net: NetName=NetC33_1 Pin=U1-14/A0
+Added Pin To Net: NetName=SO2 Pin=U1-15/A1
+Added Pin To Net: NetName=SO1 Pin=U1-16/A2
+Added Pin To Net: NetName=NetR26_2 Pin=U1-17/A3
+Added Pin To Net: NetName=PWM_IN Pin=U1-18/A4
+Added Pin To Net: NetName=NetU1_19/A5 Pin=U1-19/A5
+Added Pin To Net: NetName=NetU1_20/A6 Pin=U1-20/A6
+Added Pin To Net: NetName=NetU1_21/A7 Pin=U1-21/A7
+Added Pin To Net: NetName=NetU1_22/A8 Pin=U1-22/A8
+Added Pin To Net: NetName=NetU1_23/A9 Pin=U1-23/A9
+Added Pin To Net: NetName=NetR9_2 Pin=U2-1
+Added Pin To Net: NetName=NetC13_2 Pin=U2-2
+Added Pin To Net: NetName=NetR10_2 Pin=U2-3
+Added Pin To Net: NetName=PWRGD Pin=U2-4
+Added Pin To Net: NetName=OCTW Pin=U2-5
+Added Pin To Net: NetName=FAULT Pin=U2-6
+Added Pin To Net: NetName=NetR12_2 Pin=U2-7
+Added Pin To Net: NetName=SL_C Pin=U2-8
+Added Pin To Net: NetName=VCC Pin=U2-9
+Added Pin To Net: NetName=SL_C Pin=U2-10
+Added Pin To Net: NetName=NetR13_1 Pin=U2-11
+Added Pin To Net: NetName=NetU1_19/A5 Pin=U2-12
+Added Pin To Net: NetName=NetC15_1 Pin=U2-13
+Added Pin To Net: NetName=NetC16_2 Pin=U2-14
+Added Pin To Net: NetName=NetC16_1 Pin=U2-15
+Added Pin To Net: NetName=NetU1_21/A7 Pin=U2-16
+Added Pin To Net: NetName=NetU1_22/A8 Pin=U2-17
+Added Pin To Net: NetName=NetU1_23/A9 Pin=U2-18
+Added Pin To Net: NetName=NetU1_9 Pin=U2-19
+Added Pin To Net: NetName=NetU1_10 Pin=U2-20
+Added Pin To Net: NetName=NetU1_5 Pin=U2-21
+Added Pin To Net: NetName=NetU1_20/A6 Pin=U2-22
+Added Pin To Net: NetName=NetC17_2 Pin=U2-23
+Added Pin To Net: NetName=VCC Pin=U2-24
+Added Pin To Net: NetName=SO1 Pin=U2-25
+Added Pin To Net: NetName=SO2 Pin=U2-26
+Added Pin To Net: NetName=NetC19_2 Pin=U2-27
+Added Pin To Net: NetName=SL_C Pin=U2-28
+Added Pin To Net: NetName=VDD Pin=U2-29
+Added Pin To Net: NetName=NetC8_2 Pin=U2-30
+Added Pin To Net: NetName=NetC8_1 Pin=U2-31
+Added Pin To Net: NetName=NetC7_2 Pin=U2-32
+Added Pin To Net: NetName=NetC7_1 Pin=U2-33
+Added Pin To Net: NetName=SL_C Pin=U2-34
+Added Pin To Net: NetName=GL_C Pin=U2-35
+Added Pin To Net: NetName=SH_C Pin=U2-36
+Added Pin To Net: NetName=GH_C Pin=U2-37
+Added Pin To Net: NetName=NetC6_1 Pin=U2-38
+Added Pin To Net: NetName=SL_B Pin=U2-39
+Added Pin To Net: NetName=GL_B Pin=U2-40
+Added Pin To Net: NetName=SH_B Pin=U2-41
+Added Pin To Net: NetName=GH_B Pin=U2-42
+Added Pin To Net: NetName=NetC5_1 Pin=U2-43
+Added Pin To Net: NetName=SL_A Pin=U2-44
+Added Pin To Net: NetName=GL_A Pin=U2-45
+Added Pin To Net: NetName=SH_A Pin=U2-46
+Added Pin To Net: NetName=GH_A Pin=U2-47
+Added Pin To Net: NetName=NetC4_1 Pin=U2-48
+Added Pin To Net: NetName=NetR1_1 Pin=U2-49
+Added Pin To Net: NetName=NetC2_2 Pin=U2-50
+Added Pin To Net: NetName=NetC2_2 Pin=U2-51
+Added Pin To Net: NetName=NetC2_1 Pin=U2-52
+Added Pin To Net: NetName=VDD Pin=U2-53
+Added Pin To Net: NetName=VDD Pin=U2-54
+Added Pin To Net: NetName=NetC12_1 Pin=U2-56
+Added Pin To Net: NetName=SL_C Pin=U2-57
+Added Member To Class: ClassName=U_Power Member=Component R6 0.001R
+Added Member To Class: ClassName=U_Power Member=Component R7 0.001R
+Added Member To Class: ClassName=U_MCU Member=Component U1 Teensy 3.0
+Added Member To Class: ClassName=U_Power Member=Component U2 DRV8302

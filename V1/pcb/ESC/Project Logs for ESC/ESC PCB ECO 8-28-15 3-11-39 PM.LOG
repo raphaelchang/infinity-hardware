@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=SL_C Pin=U3-4
+Change Component DesignItemId : Designator=U3 Old DesignItemId=CMP-0136-00509-1 New DesignItemId=PM-LINEREG-TC2117-IL4
+Change Component Footprint: Designator=U3 Old Footprint=SOT-223-DB3_N New Footprint=SOT-223-DB3_M

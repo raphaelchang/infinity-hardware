@@ -1,0 +1,3 @@
+Change Component DesignItemId : Designator=L1 Old DesignItemId=CMP-1392-00029-1 New DesignItemId=SDR0805-180ML
+Change Component Footprint: Designator=L1 Old Footprint=SMD 0805_A New Footprint=SDR0805-180ML
+Change Component Comment : Designator=L1 Old Comment=22uH New Comment=SDR0805-180ML

@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=SO2 Pin=JP3-2
+Removed Pin From Net: NetName=SO1 Pin=JP3-3
+Removed Pin From Net: NetName=FAULT Pin=JP3-4
+Removed Pin From Net: NetName=OCTW Pin=JP3-5
+Removed Pin From Net: NetName=PWRGD Pin=JP3-6
+Change Component DesignItemId : Designator=JP3 Old DesignItemId=JST_6_VERT New DesignItemId=JST_4_VERT
+Change Component Footprint: Designator=JP3 Old Footprint=JST-6-PTH-VERT New Footprint=JST-4-PTH-VERT
+Added Pin To Net: NetName=FAULT Pin=JP3-2
+Added Pin To Net: NetName=OCTW Pin=JP3-3
+Added Pin To Net: NetName=PWRGD Pin=JP3-4
