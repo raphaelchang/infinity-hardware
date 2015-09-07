@@ -1,0 +1,17 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: ESC.PcbDoc   9/6/15  6:25:40 PM
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : ESC.TXT
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        10mil (0.254mm)          Round          32               1.09 Inch (27.56 mm)
+T2        18mil (0.4572mm)         Round          22               3.24 Inch (82.37 mm)
+T3        28mil (0.7112mm)         Round          148              24.69 Inch (627.23 mm)
+T4        38mil (0.9652mm)         Round          41               6.04 Inch (153.43 mm)
+---------------------------------------------------------------------------
+Totals                                            243              35.06 Inch (890.59 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00
