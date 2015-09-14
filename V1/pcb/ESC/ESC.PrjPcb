@@ -90,7 +90,7 @@ GenerateClassCluster=0
 DocumentUniqueId=RWLWPYJN
 
 [Document4]
-DocumentPath=..\..\..\..\..\..\Downloads\Imported SparkFun-Connectors.PrjPcb\ESC.PcbDoc
+DocumentPath=ESC.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -148,107 +148,63 @@ DocumentPath=Project Outputs for ESC\Gerber\ESC.GBL
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=Project Outputs for Free Documents\Gerber\ESC.GBL
-DItemRevisionGUID=
-
-[GeneratedDocument8]
 DocumentPath=Project Outputs for ESC\Gerber\ESC.GBO
 DItemRevisionGUID=
 
-[GeneratedDocument9]
-DocumentPath=Project Outputs for Free Documents\Gerber\ESC.GBO
-DItemRevisionGUID=
-
-[GeneratedDocument10]
+[GeneratedDocument8]
 DocumentPath=Project Outputs for ESC\Gerber\ESC.GBP
 DItemRevisionGUID=
 
-[GeneratedDocument11]
-DocumentPath=Project Outputs for Free Documents\Gerber\ESC.GBP
-DItemRevisionGUID=
-
-[GeneratedDocument12]
+[GeneratedDocument9]
 DocumentPath=Project Outputs for ESC\Gerber\ESC.GBS
 DItemRevisionGUID=
 
-[GeneratedDocument13]
-DocumentPath=Project Outputs for Free Documents\Gerber\ESC.GBS
-DItemRevisionGUID=
-
-[GeneratedDocument14]
+[GeneratedDocument10]
 DocumentPath=Project Outputs for ESC\Gerber\ESC.GKO
 DItemRevisionGUID=
 
-[GeneratedDocument15]
-DocumentPath=Project Outputs for Free Documents\Gerber\ESC.GKO
-DItemRevisionGUID=
-
-[GeneratedDocument16]
+[GeneratedDocument11]
 DocumentPath=Project Outputs for ESC\Gerber\ESC.GM1
 DItemRevisionGUID=
 
-[GeneratedDocument17]
+[GeneratedDocument12]
 DocumentPath=Project Outputs for ESC\Gerber\ESC.GTL
 DItemRevisionGUID=
 
-[GeneratedDocument18]
-DocumentPath=Project Outputs for Free Documents\Gerber\ESC.GTL
-DItemRevisionGUID=
-
-[GeneratedDocument19]
+[GeneratedDocument13]
 DocumentPath=Project Outputs for ESC\Gerber\ESC.GTO
 DItemRevisionGUID=
 
-[GeneratedDocument20]
-DocumentPath=Project Outputs for Free Documents\Gerber\ESC.GTO
-DItemRevisionGUID=
-
-[GeneratedDocument21]
+[GeneratedDocument14]
 DocumentPath=Project Outputs for ESC\Gerber\ESC.GTP
 DItemRevisionGUID=
 
-[GeneratedDocument22]
-DocumentPath=Project Outputs for Free Documents\Gerber\ESC.GTP
-DItemRevisionGUID=
-
-[GeneratedDocument23]
+[GeneratedDocument15]
 DocumentPath=Project Outputs for ESC\Gerber\ESC.GTS
 DItemRevisionGUID=
 
-[GeneratedDocument24]
-DocumentPath=Project Outputs for Free Documents\Gerber\ESC.GTS
-DItemRevisionGUID=
-
-[GeneratedDocument25]
+[GeneratedDocument16]
 DocumentPath=Project Outputs for ESC\NC Drill\ESC.LDP
 DItemRevisionGUID=
 
-[GeneratedDocument26]
+[GeneratedDocument17]
 DocumentPath=Project Outputs for Free Documents\NC Drill\ESC.LDP
 DItemRevisionGUID=
 
-[GeneratedDocument27]
+[GeneratedDocument18]
 DocumentPath=Project Outputs for ESC\Gerber\ESC.REP
 DItemRevisionGUID=
 
-[GeneratedDocument28]
-DocumentPath=Project Outputs for Free Documents\Gerber\ESC.REP
-DItemRevisionGUID=
-
-[GeneratedDocument29]
+[GeneratedDocument19]
 DocumentPath=Project Outputs for ESC\Gerber\ESC.RUL
 DItemRevisionGUID=
 
-[GeneratedDocument30]
+[GeneratedDocument20]
 DocumentPath=Project Outputs for Free Documents\Gerber\ESC.RUL
 DItemRevisionGUID=
 
-[GeneratedDocument31]
+[GeneratedDocument21]
 DocumentPath=Project Outputs for ESC\NC Drill\ESC.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument32]
-DocumentPath=Project Outputs for Free Documents\NC Drill\ESC.TXT
 DItemRevisionGUID=
 
 [Configuration1]
