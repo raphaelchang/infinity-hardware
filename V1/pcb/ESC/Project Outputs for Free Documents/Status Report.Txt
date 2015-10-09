@@ -1,12 +1,10 @@
-Output: NC Drill Files
-Type  : NC Drill
-From  : PCB Document [ESC.PcbDoc]
-   Generated File[ESC.TXT]
-   Generated File[ESC.LDP]
-   Generated File[ESC.DRR]
+Output: Bill of Materials
+Type  : BOM
+From  : Variant [[No Variations]] of Project [ESC.PrjPcb]
+   Generated File[Bill of Materials-ESC.xls]
 
 
-Files Generated   : 3
+Files Generated   : 1
 Documents Printed : 0
 
-Finished Output Generation At 8:27:04 PM On 9/7/15
+Finished Output Generation At 6:40:00 PM On 10/7/15
