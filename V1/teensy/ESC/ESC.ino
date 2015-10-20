@@ -2,26 +2,39 @@
 
 #include "pwm.h"
 
+#include "transforms.h"
+#include "zsm.h"
+
 #define PERIPHERAL_BUS_CLOCK 48000000   // Bus Clock 48MHz
 #define FTM0_CLK_PRESCALE 0             // FTM0 Prescaler
-#define FTM0_OVERFLOW_FREQUENCY 48000   // PWM frequency in Hz
+#define FTM0_OVERFLOW_FREQUENCY 24000   // PWM frequency in Hz
 #define FTM0_DEADTIME_DTVAL 1           // Dead Time
 #define PWM_MAX (PERIPHERAL_BUS_CLOCK / FTM0_OVERFLOW_FREQUENCY / 2)
 
 int dio = 0;
 int clk = 1;
 int cs  = 2;
-int encoder_index = 7;
-int brake_switch = 19;
+int encoder_a = 3;
+int encoder_b = 4;
+int led_forward = 5;
+int led_reverse = 11;
+int led_error = 12;
+int pwrgd = 14;
+int fault = 15;
+int octw = 16;
+int voltage_sense = 3;
+int pwm_in = 18;
+int dc_cal = 19;
+int en_gate = 21;
+int so1 = 10;
+int so2 = 11;
 int pwm[6] = {22, 9, 6, 23, 10, 20};
+double duty = 0.0;
 int pole_pairs = 7;
-int factor = 1000;
 int zero = 13; // Energize phase 0-1 to zero
 int zero_offset;
-double duty = 1.0;
 const bool sine = true;
-const bool trap = true;
-int speed = sine ? duty * PWM_MAX : duty * 255;
+const bool trap = false;
 int offset;
 int fudge = 18; // Electrical degrees to advance by
 bool reverse = false;
@@ -41,6 +54,8 @@ void init_as5134(void){
 }
 
 int read_as5134(void){
+  static int e = 0;
+  return e++ % 360;
   int clock_p;
   unsigned int data=0;
   digitalWrite(cs,LOW);
@@ -65,11 +80,11 @@ void power_phase(int in, int out, int duty_cycle)
   for (int i = 0; i < 6; i++)
   {
     if (i == in)
-      analogWrite(pwm[i], 255 - duty_cycle);
+      analogWrite(pwm[i], duty_cycle);
     else if (i == out + 3)
-      analogWrite(pwm[i], 0);
-    else
       analogWrite(pwm[i], 255);
+    else
+      analogWrite(pwm[i], 0);
   }
 }
 
@@ -81,52 +96,6 @@ void set_phase_voltages(int u, int v, int w, int duty_cycle)
     return;
   }
   PWM_SetDutyCycle((u * duty_cycle) / PWM_MAX, (v * duty_cycle) / PWM_MAX, (w * duty_cycle) / PWM_MAX);
-//  if (rpm > 2)
-//  {
-//    Serial.print(u);
-//    Serial.print(",");
-//    Serial.print(v);
-//    Serial.print(",");
-//    Serial.print(w);
-//    Serial.print(",");
-//    Serial.print(u-v);
-//    Serial.print(",");
-//    Serial.print(v-w);
-//    Serial.print(",");
-//    Serial.print(w-u);
-//    Serial.print(",");
-//    Serial.println(abs(u-v) + abs(v-w) + abs(w-u));
-//  }
-//  if (u == 0)
-//  {
-//    analogWrite(pwm[0], 255);
-//    analogWrite(pwm[3], 0);
-//  }
-//  else
-//  {
-//    analogWrite(pwm[3], 255);
-//    analogWrite(pwm[0], 255 - u * duty_cycle / 255);
-//  }
-//  if (v == 0)
-//  {
-//    analogWrite(pwm[1], 255);
-//    analogWrite(pwm[4], 0);
-//  }
-//  else
-//  {
-//    analogWrite(pwm[4], 255);
-//    analogWrite(pwm[1], 255 - v * duty_cycle / 255);
-//  }
-//  if (w == 0)
-//  {
-//    analogWrite(pwm[2], 255);
-//    analogWrite(pwm[5], 0);
-//  }
-//  else
-//  {
-//    analogWrite(pwm[5], 255);
-//    analogWrite(pwm[2], 255 - w * duty_cycle / 255);
-//  }
 }
 
 int wrap(int angle)
@@ -160,16 +129,77 @@ void brake_trigger_on()
 {
   brake = true;
   PWM_BrakeMode();
-  detachInterrupt(brake_switch);
-  attachInterrupt(brake_switch, brake_trigger_off, FALLING);
 }
 
 void brake_trigger_off()
 {
   brake = false;
   PWM_BrakeModeEnd();
-  detachInterrupt(brake_switch);
-  attachInterrupt(brake_switch, brake_trigger_on, RISING);
+}
+
+void sine_commutate(int speed)
+{
+  int orig = read_as5134();
+  int angle = wrap((orig - zero) * factor);
+  int edeg = scale(angle) / factor;
+  int alpha, beta, a, b, c;
+  inversePark(0, speed, edeg, &alpha, &beta);
+  inverseClarke(alpha, beta, &a, &b, &c);
+  top_bottom_clamp(&a, &b, &c);
+  int avg = (a + b + c) / 3;
+  /*Serial.print(edeg);
+  Serial.print(",");
+  Serial.print(a);
+  Serial.print(",");
+  Serial.print(b);
+  Serial.print(",");
+  Serial.print(c);
+  Serial.print(",");
+  Serial.print(a - avg);
+  Serial.print(",");
+  Serial.print(b - avg);
+  Serial.print(",");
+  Serial.print(c - avg);
+  Serial.print(",");
+  Serial.println(avg);*/
+  PWM_SetDutyCycle((a * PWM_MAX) / factor, (b * PWM_MAX) / factor, (c * PWM_MAX) / factor);
+}
+
+void step_commutate(int speed)
+{
+  int advance = fudge * factor / pole_pairs + rpm * factor / phase_advance_factor / pole_pairs;
+  if (!reverse)
+    zero_offset = zero * factor - offset - advance;
+  else
+    zero_offset = zero * factor + offset + advance;
+  int orig = read_as5134();
+  int angle = wrap(orig * factor - zero_offset);
+  int scaled = scale(angle);
+  int step = scaled / (60 * factor);
+  switch (step)
+  {
+    case 0:
+      power_phase(0, 1, speed);
+      break;
+    case 1:
+      power_phase(2, 1, speed);
+      break;
+    case 2:
+      power_phase(2, 0, speed);
+      break;
+    case 3:
+      power_phase(1, 0, speed);
+      break;
+    case 4:
+      power_phase(1, 2, speed);
+      break;
+    case 5:
+      power_phase(0, 2, speed);
+      break;
+    case 6:
+      power_phase(-99, -99, 0);
+      break;
+  }
 }
 
 void setup() {
@@ -191,102 +221,77 @@ void setup() {
     {
       pinMode(pwm[i], OUTPUT);
       analogWriteFrequency(pwm[i], FTM0_OVERFLOW_FREQUENCY);
-      analogWrite(pwm[i], 255);
+      analogWrite(pwm[i], 0);
     }
   }
   else if (sine)
   {
     PWMInit(PERIPHERAL_BUS_CLOCK, FTM0_CLK_PRESCALE, FTM0_OVERFLOW_FREQUENCY, FTM0_DEADTIME_DTVAL, false);
   }
-  pinMode(brake_switch, INPUT);
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, HIGH);
   Serial.begin(115200);
-  pinMode(encoder_index, INPUT);
-  attachInterrupt(encoder_index, calculate_speed, RISING);
-  attachInterrupt(brake_switch, brake_trigger_on, RISING);
+  Serial3.begin(115200);
+  pinMode(encoder_a, INPUT);
+  pinMode(encoder_b, INPUT);
+  pinMode(led_forward, OUTPUT);
+  pinMode(led_reverse, OUTPUT);
+  pinMode(led_error, OUTPUT);
+  pinMode(pwrgd, INPUT_PULLUP);
+  pinMode(fault, INPUT_PULLUP);
+  pinMode(octw, INPUT_PULLUP);
+  pinMode(pwm_in, INPUT);
+  pinMode(dc_cal, OUTPUT);
+  pinMode(en_gate, OUTPUT);
+  attachInterrupt(encoder_a, calculate_speed, RISING);
+  digitalWrite(dc_cal, LOW);
+  digitalWrite(en_gate, LOW);
 }
 
 void loop() {
+  if (Serial.available() > 0)
+  {
+    char b = Serial.read();
+      Serial.println(b);
+    if (b == '1')
+    {
+      duty = 0.5;
+    }
+    else
+    {
+      duty = 0.0;
+    }
+  }
+  if (duty > 0)
+  {
+    digitalWrite(en_gate, HIGH);
+    digitalWrite(led_forward, HIGH);
+  }
+  else
+  {
+    digitalWrite(en_gate, LOW);
+    digitalWrite(led_forward, LOW);
+  }
+  int speed = sine ? duty * PWM_MAX : duty * 255;
   static int e = 0;
   if (micros() - lastTime > 500000)
   {
     measured_speed = rpm = 0;
   }
-  digitalWrite(LED_BUILTIN, !brake);
-  int advance = fudge * factor / pole_pairs + rpm * factor / phase_advance_factor / pole_pairs;
-  if (!reverse)
-    zero_offset = zero * factor - offset - advance;
-  else
-    zero_offset = zero * factor + offset + advance;
-  int orig = read_as5134();
-  int angle = wrap(orig * factor - zero_offset);
-  int scaled = scale(angle);
-  int step = scaled / (60 * factor);
-  if (e++ % 4 == 0)
+  if (sine)
   {
-    //Serial.print("Step: ");
-    //Serial.println(step);
-    //Serial.println(orig);
-  }
-  if (!sine)
-  {
-    switch (step)
-    {
-      case 0:
-        power_phase(0, 1, speed);
-        break;
-      case 1:
-        power_phase(2, 1, speed);
-        break;
-      case 2:
-        power_phase(2, 0, speed);
-        break;
-      case 3:
-        power_phase(1, 0, speed);
-        break;
-      case 4:
-        power_phase(1, 2, speed);
-        break;
-      case 5:
-        power_phase(0, 2, speed);
-        break;
-      case 6:
-        power_phase(-99, -99, 0);
-        break;
-    }
+    sine_commutate(speed);
   }
   else
   {
-    if (!brake)
-    {
-      if (step == 0 || step == 1)
-      {
-        if (!trap)
-          set_phase_voltages(-sintable[(scaled / factor + 240) % 360], 0, sintable[scaled / factor], speed);
-        else
-          set_phase_voltages(-traptable[(scaled / factor + 240) % 360], 0, traptable[scaled / factor], speed);
-      }
-      else if (step == 2 || step == 3)
-      {
-        if (!trap)
-          set_phase_voltages(0, sintable[(scaled / factor + 240) % 360], -sintable[(scaled / factor + 120) % 360], speed);
-        else
-          set_phase_voltages(0, traptable[(scaled / factor + 240) % 360], -traptable[(scaled / factor + 120) % 360], speed);
-      }
-      else if (step == 4 || step == 5)
-      {
-        if (!trap)
-          set_phase_voltages(sintable[(scaled / factor + 120) % 360], -sintable[scaled / factor], 0, speed);
-        else
-          set_phase_voltages(traptable[(scaled / factor + 120) % 360], -traptable[scaled / factor], 0, speed);
-      }
-    }
-    else
-    {
-      PWM_Brake(450);
-    }
+    step_commutate(speed);
   }
-  if (e % 1000 == 0)
-    Serial.println(rpm);
+  if (digitalRead(octw) == LOW || digitalRead(fault) == LOW)
+  {
+    digitalWrite(led_error, HIGH);
+  }
+  else
+  {
+    digitalWrite(led_error, LOW);
+  }
 }
