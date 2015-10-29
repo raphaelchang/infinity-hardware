@@ -1,6 +1,7 @@
 #include "sine.h"
 
 #include "pwm.h"
+#include "adc.h"
 
 #include "transforms.h"
 #include "zsm.h"
@@ -26,8 +27,8 @@ int voltage_sense = 3;
 int pwm_in = 18;
 int dc_cal = 19;
 int en_gate = 21;
-int so1 = 10;
-int so2 = 11;
+int so1 = A10;
+int so2 = A11;
 int pwm[6] = {22, 9, 6, 23, 10, 20};
 double duty = 0.0;
 int pole_pairs = 7;
@@ -44,6 +45,11 @@ bool brake = false;
 int measured_speed;
 int rpm;
 const int phase_advance_factor = 500; // rpm/deg
+int current_a;
+int current_b;
+int current_c;
+int current_d;
+int current_q;
 
 void init_as5134(void){
   digitalWrite(cs, LOW);
@@ -54,8 +60,6 @@ void init_as5134(void){
 }
 
 int read_as5134(void){
-  static int e = 0;
-  return e++ % 360;
   int clock_p;
   unsigned int data=0;
   digitalWrite(cs,LOW);
@@ -137,6 +141,33 @@ void brake_trigger_off()
   PWM_BrakeModeEnd();
 }
 
+void measure_current()
+{
+  
+  int a = ADC0_IRQHandler();
+  int b = analogRead(so2);
+  a -= 32768; // Offset
+  b -= 32768;
+  a *= 3300; // Scale to 1000 * voltage
+  a /= 65536;
+  b *= 3300;
+  b /= 65536;
+  a *= 1000; // Divide by resistance
+  b *= 1000;
+  a /= 10; // Divide by gain
+  b /= 10;
+  int c = -(a + b);
+  current_a = a;
+  current_b = b;
+  current_c = c;
+  int orig = read_as5134();
+  int angle = wrap((orig - zero) * factor);
+  int edeg = scale(angle) / factor;
+  int alpha, beta;
+  clarke(a, b, c, &alpha, &beta);
+  park(alpha, beta, edeg, &current_d, &current_q);
+}
+
 void sine_commutate(int speed)
 {
   int orig = read_as5134();
@@ -145,7 +176,12 @@ void sine_commutate(int speed)
   int alpha, beta, a, b, c;
   inversePark(0, speed, edeg, &alpha, &beta);
   inverseClarke(alpha, beta, &a, &b, &c);
-  top_bottom_clamp(&a, &b, &c);
+  midpoint_clamp(&a, &b, &c);
+  Serial.print(a);
+  Serial.print(",");
+  Serial.print(b);
+  Serial.print(",");
+  Serial.println(c);
   int avg = (a + b + c) / 3;
   /*Serial.print(edeg);
   Serial.print(",");
@@ -162,6 +198,9 @@ void sine_commutate(int speed)
   Serial.print(c - avg);
   Serial.print(",");
   Serial.println(avg);*/
+  if (speed == 0)
+  PWM_SetDutyCycle(0,0,0);
+  else
   PWM_SetDutyCycle((a * PWM_MAX) / factor, (b * PWM_MAX) / factor, (c * PWM_MAX) / factor);
 }
 
@@ -228,6 +267,8 @@ void setup() {
   {
     PWMInit(PERIPHERAL_BUS_CLOCK, FTM0_CLK_PRESCALE, FTM0_OVERFLOW_FREQUENCY, FTM0_DEADTIME_DTVAL, false);
   }
+  analogReference(DEFAULT);
+  setup_adc();
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, HIGH);
   Serial.begin(115200);
@@ -243,12 +284,16 @@ void setup() {
   pinMode(pwm_in, INPUT);
   pinMode(dc_cal, OUTPUT);
   pinMode(en_gate, OUTPUT);
+  pinMode(so1, INPUT);
+  pinMode(so2, INPUT);
   attachInterrupt(encoder_a, calculate_speed, RISING);
   digitalWrite(dc_cal, LOW);
   digitalWrite(en_gate, LOW);
 }
 
 void loop() {
+  measure_current();
+    digitalWrite(en_gate, HIGH);
   if (Serial.available() > 0)
   {
     char b = Serial.read();
@@ -264,15 +309,13 @@ void loop() {
   }
   if (duty > 0)
   {
-    digitalWrite(en_gate, HIGH);
     digitalWrite(led_forward, HIGH);
   }
   else
   {
-    digitalWrite(en_gate, LOW);
     digitalWrite(led_forward, LOW);
   }
-  int speed = sine ? duty * PWM_MAX : duty * 255;
+  int speed = sine ? duty * factor : duty * 255;
   static int e = 0;
   if (micros() - lastTime > 500000)
   {
@@ -288,6 +331,8 @@ void loop() {
   }
   if (digitalRead(octw) == LOW || digitalRead(fault) == LOW)
   {
+    Serial.println(digitalRead(octw));
+    Serial.println(digitalRead(fault));
     digitalWrite(led_error, HIGH);
   }
   else

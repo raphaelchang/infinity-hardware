@@ -19,8 +19,8 @@ void inversePark(int d, int q, int theta, int *alpha, int *beta)
 
 void clarke(int a, int b, int c, int *alpha, int *beta)
 {
-  *alpha = (3 * a) / 2;
-  *beta = (866 * b) / factor - (866 * c) / factor;
+  *alpha = a;
+  *beta = (577 * a) / factor + (1154 * b) / factor;
 }
 
 void inverseClarke(int alpha, int beta, int *a, int *b, int *c)

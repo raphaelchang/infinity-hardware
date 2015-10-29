@@ -1,4 +1,5 @@
 #include <mk20dx128.h>
+#include <kinetis.h>
 
 void PWMInit(uint32_t PERIPHERAL_BUS_CLOCK, uint8_t FTM0_CLK_PRESCALE, uint32_t FTM0_OVERFLOW_FREQUENCY, uint8_t FTM0_DEADTIME_DTVAL, bool invert)
 {
@@ -84,10 +85,16 @@ void PWMInit(uint32_t PERIPHERAL_BUS_CLOCK, uint8_t FTM0_CLK_PRESCALE, uint32_t 
 
   FTM0_DEADTIME = FTM0_DEADTIME_DTVAL; //About 5usec
 
+  FTM0_EXTTRIG |= FTM_EXTTRIG_INITTRIGEN;
+  FTM0_MODE |= FTM_MODE_INIT;
+  SIM_SOPT7 |= SIM_SOPT7_ADC0TRGSEL (0x8) | SIM_SOPT7_ADC0ALTTRGEN; /*FTM0 triggers
+ADC0*/
+
   //Status and Control bits
   FTM0_SC = FTM_SC_CLKS(1);  // Selects Clock source to be "system clock"
   //sets pre-scale value see details below
   FTM0_SC |= FTM_SC_PS(FTM0_CLK_PRESCALE);
+  //FTM0_SC |= FTM_SC_CPWMS;
   
   // Interrupts
   //FTM0_SC |= FTM_SC_TOIE; //Enable the interrupt mask.  timer overflow interrupt.. enables interrupt signal to come out of the module itself...  (have to enable 2x, one in the peripheral and once in the NVIC

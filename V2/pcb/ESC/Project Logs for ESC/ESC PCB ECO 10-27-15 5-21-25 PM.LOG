@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=VCC Pin=JP1-5
+Change Component Library : Designator=JP1 Old Library=Components.IntLib New Library=Components.SchLib
+Change Component Library : Designator=JP2 Old Library=Components.IntLib New Library=Components.SchLib
+Added Pin To Net: NetName=+5V Pin=JP1-5
