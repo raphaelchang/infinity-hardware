@@ -8,8 +8,8 @@
 
 #define PERIPHERAL_BUS_CLOCK 48000000   // Bus Clock 48MHz
 #define FTM0_CLK_PRESCALE 0             // FTM0 Prescaler
-#define FTM0_OVERFLOW_FREQUENCY 24000   // PWM frequency in Hz
-#define FTM0_DEADTIME_DTVAL 1           // Dead Time
+#define FTM0_OVERFLOW_FREQUENCY 32000   // PWM frequency in Hz
+#define FTM0_DEADTIME_DTVAL 12           // Dead Time
 #define PWM_MAX (PERIPHERAL_BUS_CLOCK / FTM0_OVERFLOW_FREQUENCY / 2)
 
 AS5134 *as5134;
@@ -31,7 +31,7 @@ int so2 = A5;
 int reset = 21;
 int pwm[6] = {22, 9, 6, 23, 10, 20};
 double duty = 0.0;
-int zero = 13; // Energize phase 0-1 to zero
+int zero = 180; // Energize phase 0-1 to zero
 int zero_offset;
 const bool sine = true;
 const bool trap = false;
@@ -44,6 +44,8 @@ int current_b;
 int current_c;
 int current_d;
 int current_q;
+int blink_interval = 1000;
+int blink_counter = 0;
 
 void power_phase(int in, int out, int duty_cycle)
 {
@@ -74,8 +76,8 @@ void measure_current()
 {
   int a = analogRead(so1);
   int b = analogRead(so2);
-  a -= 32768; // Offset
-  b -= 32768;
+  a -= 65536; // Offset
+  b -= 65536;
   a *= 3300; // Scale to 1000 * voltage
   a /= 65536;
   b *= 3300;
@@ -151,6 +153,7 @@ void setup() {
     PWMInit(PERIPHERAL_BUS_CLOCK, FTM0_CLK_PRESCALE, FTM0_OVERFLOW_FREQUENCY, FTM0_DEADTIME_DTVAL, false);
   }
   analogReference(DEFAULT);
+  analogReadResolution(16);
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, HIGH);
   Serial.begin(115200);
@@ -176,20 +179,48 @@ void loop() {
       Serial.println(b);
     if (b == '1')
     {
-      duty = 0.5;
+      duty = 0.3;
+    }
+    else if (b == '2')
+    {
+      sineController->Update(factor / 4, 0, 0);
+      int a = sineController->GetPhaseA();
+      int b = sineController->GetPhaseB();
+      int c = sineController->GetPhaseC();
+//      Serial.print(a);
+//      Serial.print(",");
+//      Serial.print(b);
+//      Serial.print(",");
+//      Serial.println(c);
+      PWM_SetDutyCycle((a * PWM_MAX) / factor, (b * PWM_MAX) / factor, (c * PWM_MAX) / factor);
+      delay(100);
+      int orig = as5134->Read();
+      Serial.println(orig);
+      PWM_SetDutyCycle(0,0,0);
     }
     else
     {
       duty = 0.0;
     }
   }
-  if (duty > 0)
+  if (duty > 0 || duty < 0)
   {
-    digitalWrite(led_forward, HIGH);
+    int led = duty > 0 ? led_forward : led_reverse;
+    digitalWrite(led, HIGH);
+    blink_counter++;
+    if (blink_counter > blink_interval)
+    {
+      blink_counter = 0;
+    }
+    if (blink_counter > blink_interval * duty)
+    {
+      digitalWrite(led, LOW);
+    }
   }
   else
   {
     digitalWrite(led_forward, LOW);
+    digitalWrite(led_reverse, LOW);
   }
   int speed = sine ? duty * factor : duty * 255;
   static int e = 0;
@@ -202,15 +233,24 @@ void loop() {
     int a = sineController->GetPhaseA();
     int b = sineController->GetPhaseB();
     int c = sineController->GetPhaseC();
-    Serial.print(a);
-    Serial.print(",");
-    Serial.print(b);
-    Serial.print(",");
-    Serial.println(c);
+//    Serial.print(a);
+//    Serial.print(",");
+//    Serial.print(b);
+//    Serial.print(",");
+//    Serial.println(c);
     if (speed == 0)
+    {
       PWM_SetDutyCycle(0,0,0);
+    }
     else
+    {
+      Serial.print(current_a);
+      Serial.print(",");
+      Serial.print(current_b);
+      Serial.print(",");
+      Serial.println(current_c);
       PWM_SetDutyCycle((a * PWM_MAX) / factor, (b * PWM_MAX) / factor, (c * PWM_MAX) / factor);
+    }
   }
   else
   {
@@ -218,7 +258,7 @@ void loop() {
   }
   if (digitalRead(ff1) == HIGH || digitalRead(ff2) == HIGH)
   {
-    Serial.println(digitalRead(ff1));
+    Serial.print(digitalRead(ff1));
     Serial.println(digitalRead(ff2));
     digitalWrite(led_error, HIGH);
   }
@@ -227,3 +267,5 @@ void loop() {
     digitalWrite(led_error, LOW);
   }
 }
+
+

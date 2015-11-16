@@ -26,23 +26,23 @@ AS5134::AS5134(int cs, int clk, int dio, int quad_a, int quad_b, int minPeriod)
 }
 
 int AS5134::Read(){
+  
   int clock_p;
   unsigned int data=0;
   digitalWrite(cs,LOW);
   digitalWrite(clk,LOW);
   digitalWrite(cs,HIGH);
-  for(clock_p = 21; clock_p > 0; clock_p--){
+  for(clock_p=21;clock_p--;clock_p>0){
     digitalWrite(clk,LOW);
     digitalWrite(clk,HIGH);
-    if(clock_p<9)
-    {
+    if(clock_p<9){
       if(digitalRead(dio))
         data+=(1<<(clock_p));
     }
   }
   digitalWrite(clk,LOW);
   digitalWrite(cs,LOW);
-  return data;
+  return 360 - data;
 }
 
 int AS5134::GetRPM()
