@@ -11,6 +11,8 @@ AS5134::AS5134(int cs, int clk, int dio, int quad_a, int quad_b, int minPeriod)
   pinMode(cs,  OUTPUT);
   pinMode(clk, OUTPUT);
   pinMode(dio, INPUT);
+  *portConfigRegister(dio) |= PORT_PCR_PE; //pull enable
+  *portConfigRegister(dio) &= ~PORT_PCR_PS; //pull down
   pinMode(quad_a, INPUT);
   pinMode(quad_b, INPUT);
   this->cs = cs;
@@ -42,7 +44,7 @@ int AS5134::Read(){
   }
   digitalWrite(clk,LOW);
   digitalWrite(cs,LOW);
-  return 360 - data;
+  return (360 - data) % 360;
 }
 
 int AS5134::GetRPM()

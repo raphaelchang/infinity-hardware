@@ -14,7 +14,7 @@ class Util
       angle += 360 * factor;
       return angle;
     }
-    while (angle > 360 * factor)
+    while (angle >= 360 * factor)
       angle -= 360 * factor;
     return angle;
   }

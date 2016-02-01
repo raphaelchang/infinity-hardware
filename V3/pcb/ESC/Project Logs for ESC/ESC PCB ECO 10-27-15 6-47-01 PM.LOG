@@ -1,0 +1,4 @@
+Change Component DesignItemId : Designator=C7 Old DesignItemId=CMP-1037-04982-1 New DesignItemId=CMP-1036-04915-1
+Change Component DesignItemId : Designator=C8 Old DesignItemId=CMP-1037-04982-1 New DesignItemId=CMP-1036-04916-1
+Change Component Footprint: Designator=C7 Old Footprint=CAPC1206(3216)190_M New Footprint=CAPC0805(2012)145_L
+Change Component Footprint: Designator=C8 Old Footprint=CAPC1206(3216)190_M New Footprint=CAPC0805(2012)155_L

@@ -8,7 +8,7 @@
 
 #define PERIPHERAL_BUS_CLOCK 48000000   // Bus Clock 48MHz
 #define FTM0_CLK_PRESCALE 0             // FTM0 Prescaler
-#define FTM0_OVERFLOW_FREQUENCY 32000   // PWM frequency in Hz
+#define FTM0_OVERFLOW_FREQUENCY 25000   // PWM frequency in Hz
 #define FTM0_DEADTIME_DTVAL 12           // Dead Time
 #define PWM_MAX (PERIPHERAL_BUS_CLOCK / FTM0_OVERFLOW_FREQUENCY / 2)
 
@@ -30,13 +30,14 @@ int so1 = A4;
 int so2 = A5;
 int reset = 21;
 int pwm[6] = {22, 9, 6, 23, 10, 20};
-double duty = 0.0;
-int zero = 180; // Energize phase 0-1 to zero
+int duty = 0;
+int speed = 0;
+int zero = 197500;
 int zero_offset;
 const bool sine = true;
 const bool trap = false;
 int offset;
-int fudge = 18; // Electrical degrees to advance by
+int fudge = 0; // Electrical degrees to advance by
 bool reverse = false;
 bool brake = false;
 int current_a;
@@ -46,6 +47,8 @@ int current_d;
 int current_q;
 int blink_interval = 1000;
 int blink_counter = 0;
+int lastangle;
+int glitchcount = 0;
 
 void power_phase(int in, int out, int duty_cycle)
 {
@@ -76,8 +79,8 @@ void measure_current()
 {
   int a = analogRead(so1);
   int b = analogRead(so2);
-  a -= 65536; // Offset
-  b -= 65536;
+  a -= 50000; // Offset
+  b -= 50000;
   a *= 3300; // Scale to 1000 * voltage
   a /= 65536;
   b *= 3300;
@@ -91,7 +94,7 @@ void measure_current()
   current_b = b;
   current_c = c;
   int orig = as5134->Read();
-  int angle = Util::Wrap((orig - zero) * factor);
+  int angle = Util::Wrap(orig * factor - zero);
   int edeg = Util::Scale(angle) / factor;
   int alpha, beta;
   Transforms::Clarke(a, b, c, &alpha, &beta);
@@ -149,7 +152,7 @@ void setup() {
   }
   else if (sine)
   {
-    sineController = new SinusoidalController(SinusoidalController::MIDPOINT_CLAMP);
+    sineController = new SinusoidalController(SinusoidalController::TOP_BOTTOM_CLAMP);
     PWMInit(PERIPHERAL_BUS_CLOCK, FTM0_CLK_PRESCALE, FTM0_OVERFLOW_FREQUENCY, FTM0_DEADTIME_DTVAL, false);
   }
   analogReference(DEFAULT);
@@ -168,10 +171,11 @@ void setup() {
   pinMode(so1, INPUT);
   pinMode(so2, INPUT);
   digitalWrite(reset, LOW);
+  lastangle = as5134->Read();
 }
 
 void loop() {
-  measure_current();
+  //measure_current();
   digitalWrite(reset, HIGH);
   if (Serial.available() > 0)
   {
@@ -179,7 +183,7 @@ void loop() {
       Serial.println(b);
     if (b == '1')
     {
-      duty = 0.3;
+      duty = 0.2 * factor;
     }
     else if (b == '2')
     {
@@ -200,7 +204,7 @@ void loop() {
     }
     else
     {
-      duty = 0.0;
+      duty = 0;
     }
   }
   if (duty > 0 || duty < 0)
@@ -212,7 +216,7 @@ void loop() {
     {
       blink_counter = 0;
     }
-    if (blink_counter > blink_interval * duty)
+    if (blink_counter > (blink_interval * duty) / factor)
     {
       digitalWrite(led, LOW);
     }
@@ -222,12 +226,33 @@ void loop() {
     digitalWrite(led_forward, LOW);
     digitalWrite(led_reverse, LOW);
   }
-  int speed = sine ? duty * factor : duty * 255;
+  if (sine)
+  {
+    if (speed < duty)
+    {
+      speed++;
+    }
+    else if (speed > duty)
+    {
+      speed--;
+    }
+  }
   static int e = 0;
   if (sine)
   {
     int orig = as5134->Read();
-    int angle = Util::Wrap((orig - zero) * factor);
+    int oorig = orig;
+    if ((orig > lastangle + glitchcount / 2 + 1 || orig < lastangle /*- glitchcount / 2 - 1*/) && (lastangle != 0 && lastangle != 359))
+    {
+      //orig = lastangle;
+      glitchcount++;
+    }
+    else
+    {
+      lastangle = orig;
+      glitchcount = 0;
+    }
+    int angle = Util::Wrap(orig * factor - zero);
     int edeg = Util::Scale(angle) / factor;
     sineController->Update(0, speed, edeg);
     int a = sineController->GetPhaseA();
@@ -244,11 +269,19 @@ void loop() {
     }
     else
     {
-      Serial.print(current_a);
-      Serial.print(",");
-      Serial.print(current_b);
-      Serial.print(",");
-      Serial.println(current_c);
+      Serial.print(orig);
+      Serial.print(" ");
+      Serial.print(lastangle);
+      Serial.print(" ");
+      Serial.print(glitchcount);
+      Serial.print(" ");
+      Serial.println(oorig);
+//      Serial.print(",");
+//      Serial.print(current_a);
+//      Serial.print(",");
+//      Serial.print(current_b);
+//      Serial.print(",");
+//      Serial.println(current_c);
       PWM_SetDutyCycle((a * PWM_MAX) / factor, (b * PWM_MAX) / factor, (c * PWM_MAX) / factor);
     }
   }
@@ -258,8 +291,8 @@ void loop() {
   }
   if (digitalRead(ff1) == HIGH || digitalRead(ff2) == HIGH)
   {
-    Serial.print(digitalRead(ff1));
-    Serial.println(digitalRead(ff2));
+    //Serial.print(digitalRead(ff1));
+    //Serial.println(digitalRead(ff2));
     digitalWrite(led_error, HIGH);
   }
   else

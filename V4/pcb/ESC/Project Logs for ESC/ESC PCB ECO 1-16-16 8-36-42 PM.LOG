@@ -1,0 +1,9 @@
+Change Component DesignItemId : Designator=U4 Old DesignItemId=CMP-0479-00264-1 New DesignItemId=LT-LTC444X-MS8E-8
+Change Component DesignItemId : Designator=U5 Old DesignItemId=CMP-0479-00264-1 New DesignItemId=LT-LTC444X-MS8E-8
+Change Component DesignItemId : Designator=U6 Old DesignItemId=CMP-0479-00264-1 New DesignItemId=LT-LTC444X-MS8E-8
+Change Component Footprint: Designator=U4 Old Footprint=LT-MS8E-8-EDP_L New Footprint=LT-MS8E-8-EDP_L
+Change Component Footprint: Designator=U5 Old Footprint=LT-MS8E-8-EDP_L New Footprint=LT-MS8E-8-EDP_L
+Change Component Footprint: Designator=U6 Old Footprint=LT-MS8E-8-EDP_L New Footprint=LT-MS8E-8-EDP_L
+Change Component Comment : Designator=U4 Old Comment=LTC4444HMS8E#PBF New Comment=LT-LTC444X-MS8E-8
+Change Component Comment : Designator=U5 Old Comment=LTC4444HMS8E#PBF New Comment=LT-LTC444X-MS8E-8
+Change Component Comment : Designator=U6 Old Comment=LTC4444HMS8E#PBF New Comment=LT-LTC444X-MS8E-8
