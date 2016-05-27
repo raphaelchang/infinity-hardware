@@ -14,7 +14,7 @@ class Transforms
   static void Park(int alpha, int beta, int theta, int *d, int *q)
   {
     *d = (alpha * Util::Sin((theta + 90) % 360) + beta * Util::Sin(theta % 360)) / factor;
-    *q = (beta * Util::Sin((theta + 90) % 360) + alpha * Util::Sin(theta % 360)) / factor;
+    *q = (beta * Util::Sin((theta + 90) % 360) - alpha * Util::Sin(theta % 360)) / factor;
   }
   
   static void InversePark(int d, int q, int theta, int *alpha, int *beta)
@@ -45,3 +45,7 @@ class Transforms
 };
 
 #endif
+
+
+
+

@@ -1,0 +1,25 @@
+Change Component Footprint: Designator=D2 Old Footprint=VISH-DO-214AC-2_N New Footprint=WS2812B
+Added Component: Designator=JP3(USB-MICROB)
+Added Component: Designator=SW1(SWITCH)
+Added Component: Designator=SW2(SWITCH)
+Added Component: Designator=Y1(ABRA-ABM3B-4_V)
+Added Pin To Net: NetName=GND Pin=D2-3
+Added Pin To Net: NetName=LED Pin=D2-4
+Added Pin To Net: NetName=USB_DP Pin=JP3-D+
+Added Pin To Net: NetName=USB_DM Pin=JP3-D-
+Added Pin To Net: NetName=GND Pin=JP3-GND
+Added Pin To Net: NetName=GND Pin=JP3-MT1
+Added Pin To Net: NetName=USB_PWR Pin=JP3-VBUS
+Added Pin To Net: NetName=NetR5_2 Pin=SW1-1
+Added Pin To Net: NetName=VCC Pin=SW1-4
+Added Pin To Net: NetName=NetC10_2 Pin=SW2-1
+Added Pin To Net: NetName=GND Pin=SW2-4
+Added Pin To Net: NetName=NetC7_1 Pin=Y1-1
+Added Pin To Net: NetName=GND Pin=Y1-2
+Added Pin To Net: NetName=GND Pin=Y1-2
+Added Pin To Net: NetName=NetC8_1 Pin=Y1-3
+Added Member To Class: ClassName=ESC Member=Component JP3 USB
+Added Member To Class: ClassName=U_MCU Member=Component SW1 
+Added Member To Class: ClassName=U_MCU Member=Component SW2 
+Added Member To Class: ClassName=U_MCU Member=Component U9 AD8418
+Added Member To Class: ClassName=U_MCU Member=Component Y1 

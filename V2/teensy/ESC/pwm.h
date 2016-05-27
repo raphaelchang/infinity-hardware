@@ -43,34 +43,47 @@ void PWMInit(uint32_t PERIPHERAL_BUS_CLOCK, uint8_t FTM0_CLK_PRESCALE, uint32_t 
   FTM0_C0SC |= FTM_CSC_ELSB; //Edge or level select
   FTM0_C0SC &= ~FTM_CSC_ELSA; //Edge or level Select
   FTM0_C0SC |= FTM_CSC_MSB; //Channel Mode select
+  //FTM0_C0SC &= ~FTM_CSC_CHF;
+  //FTM0_C0SC |= FTM_CSC_CHIE;
 
   // FTMx_CnSC - contains the channel-interrupt status flag control bits
   FTM0_C1SC |= FTM_CSC_ELSB; //Edge or level select
   FTM0_C1SC &= ~FTM_CSC_ELSA; //Edge or level Select
   FTM0_C1SC |= FTM_CSC_MSB; //Channel Mode select
+  //FTM0_C1SC &= ~FTM_CSC_CHF;
+  //FTM0_C1SC |= FTM_CSC_CHIE;
 
   // FTMx_CnSC - contains the channel-interrupt status flag control bits
   FTM0_C2SC |= FTM_CSC_ELSB; //Edge or level select
   FTM0_C2SC &= ~FTM_CSC_ELSA; //Edge or level Select
   FTM0_C2SC |= FTM_CSC_MSB; //Channel Mode select
+  //FTM0_C2SC &= ~FTM_CSC_CHF;
+  //FTM0_C2SC |= FTM_CSC_CHIE;
 
   // FTMx_CnSC - contains the channel-interrupt status flag control bits
   FTM0_C3SC |= FTM_CSC_ELSB; //Edge or level select
   FTM0_C3SC &= ~FTM_CSC_ELSA; //Edge or level Select
   FTM0_C3SC |= FTM_CSC_MSB; //Channel Mode select
+  //FTM0_C3SC &= ~FTM_CSC_CHF;
+  //FTM0_C3SC |= FTM_CSC_CHIE;
 
   // FTMx_CnSC - contains the channel-interrupt status flag control bits
   FTM0_C4SC |= FTM_CSC_ELSB; //Edge or level select
   FTM0_C4SC &= ~FTM_CSC_ELSA; //Edge or level Select
   FTM0_C4SC |= FTM_CSC_MSB; //Channel Mode select
+  //FTM0_C4SC &= ~FTM_CSC_CHF;
+  //FTM0_C4SC |= FTM_CSC_CHIE;
 
   // FTMx_CnSC - contains the channel-interrupt status flag control bits
   FTM0_C5SC |= FTM_CSC_ELSB; //Edge or level select
   FTM0_C5SC &= ~FTM_CSC_ELSA; //Edge or level Select
   FTM0_C5SC |= FTM_CSC_MSB; //Channel Mode select
+  //FTM0_C5SC &= ~FTM_CSC_CHF;
+  //FTM0_C5SC |= FTM_CSC_CHIE;
 
   //Edit registers when no clock is fed to timer so the MOD value, gets pushed in immediately
   FTM0_SC = 0; //Make sure its Off!
+  FTM0_SC |= FTM_SC_CPWMS;
 
   //FTMx_CnV contains the captured FTM counter value, this value determines the pulse width
   FTM0_C0V = FTM0_MOD/2;
@@ -86,11 +99,6 @@ void PWMInit(uint32_t PERIPHERAL_BUS_CLOCK, uint8_t FTM0_CLK_PRESCALE, uint32_t 
   FTM0_DEADTIME = 0x80;
   FTM0_DEADTIME |= FTM0_DEADTIME_DTVAL; //About 5usec
 
-  FTM0_EXTTRIG |= FTM_EXTTRIG_INITTRIGEN;
-  FTM0_MODE |= FTM_MODE_INIT;
-  SIM_SOPT7 |= SIM_SOPT7_ADC0TRGSEL (0x8) | SIM_SOPT7_ADC0ALTTRGEN; /*FTM0 triggers
-ADC0*/
-
   //Status and Control bits
   FTM0_SC = FTM_SC_CLKS(1);  // Selects Clock source to be "system clock"
   //sets pre-scale value see details below
@@ -99,6 +107,10 @@ ADC0*/
   
   // Interrupts
   //FTM0_SC |= FTM_SC_TOIE; //Enable the interrupt mask.  timer overflow interrupt.. enables interrupt signal to come out of the module itself...  (have to enable 2x, one in the peripheral and once in the NVIC
+
+  NVIC_SET_PRIORITY(IRQ_FTM0, 32);
+  NVIC_ENABLE_IRQ(IRQ_FTM0);
+  FTM0_MODE |= FTM_MODE_INIT;
 
   if (invert)
     FTM0_POL |= FTM_POL_POL0|FTM_POL_POL1|FTM_POL_POL2|FTM_POL_POL3|FTM_POL_POL4|FTM_POL_POL5;
@@ -114,6 +126,109 @@ void PWM_SetDutyCycle(unsigned short pwm1,unsigned short pwm2,unsigned short pwm
   FTM0_C4V = mod-pwm3;
   FTM0_C5V = mod+pwm3;
   FTM0_PWMLOAD |= FTM_PWMLOAD_LDOK;
+}
+
+void PWM_DisableInterrupts()
+{
+  FTM0_C0SC &= ~FTM_CSC_CHF;
+  FTM0_C0SC &= ~FTM_CSC_CHIE;
+  FTM0_C1SC &= ~FTM_CSC_CHF;
+  FTM0_C1SC &= ~FTM_CSC_CHIE;
+  FTM0_C2SC &= ~FTM_CSC_CHF;
+  FTM0_C2SC &= ~FTM_CSC_CHIE;
+  FTM0_C3SC &= ~FTM_CSC_CHF;
+  FTM0_C3SC &= ~FTM_CSC_CHIE;
+  FTM0_C4SC &= ~FTM_CSC_CHF;
+  FTM0_C4SC &= ~FTM_CSC_CHIE;
+  FTM0_C5SC &= ~FTM_CSC_CHF;
+  FTM0_C5SC &= ~FTM_CSC_CHIE;
+}
+
+void PWM_DisableInterrupt(int channel)
+{
+  switch(channel)
+  {
+    case 0:
+  FTM0_C0SC &= ~FTM_CSC_CHF;
+  FTM0_C0SC &= ~FTM_CSC_CHIE;
+  break;
+  case 1:
+  FTM0_C1SC &= ~FTM_CSC_CHF;
+  FTM0_C1SC &= ~FTM_CSC_CHIE;
+  break;
+  case 2:
+  FTM0_C2SC &= ~FTM_CSC_CHF;
+  FTM0_C2SC &= ~FTM_CSC_CHIE;
+  break;
+  case 3:
+  FTM0_C3SC &= ~FTM_CSC_CHF;
+  FTM0_C3SC &= ~FTM_CSC_CHIE;
+  break;
+  case 4:
+  FTM0_C4SC &= ~FTM_CSC_CHF;
+  FTM0_C4SC &= ~FTM_CSC_CHIE;
+  break;
+  case 5:
+  FTM0_C5SC &= ~FTM_CSC_CHF;
+  FTM0_C5SC &= ~FTM_CSC_CHIE;
+  break;
+  }
+}
+
+void PWM_ClearInterrupt(int channel)
+{
+  switch(channel)
+  {
+    case 0:
+  FTM0_C0SC &= ~FTM_CSC_CHF;
+  break;
+  case 1:
+  FTM0_C1SC &= ~FTM_CSC_CHF;
+  break;
+  case 2:
+  FTM0_C2SC &= ~FTM_CSC_CHF;
+  break;
+  case 3:
+  FTM0_C3SC &= ~FTM_CSC_CHF;
+  break;
+  case 4:
+  FTM0_C4SC &= ~FTM_CSC_CHF;
+  break;
+  case 5:
+  FTM0_C5SC &= ~FTM_CSC_CHF;
+  break;
+  }
+}
+
+void PWM_EnableInterrupt(int channel)
+{
+  switch(channel)
+  {
+    case 0:
+  FTM0_C0SC &= ~FTM_CSC_CHF;
+  FTM0_C0SC |= FTM_CSC_CHIE;
+  break;
+    case 1:
+  FTM0_C1SC &= ~FTM_CSC_CHF;
+  FTM0_C1SC |= FTM_CSC_CHIE;
+  break;
+    case 2:
+  FTM0_C2SC &= ~FTM_CSC_CHF;
+  FTM0_C2SC |= FTM_CSC_CHIE;
+  break;
+    case 3:
+  FTM0_C3SC &= ~FTM_CSC_CHF;
+  FTM0_C3SC |= FTM_CSC_CHIE;
+  break;
+    case 4:
+  FTM0_C4SC &= ~FTM_CSC_CHF;
+  FTM0_C4SC |= FTM_CSC_CHIE;
+  break;
+    case 5:
+  FTM0_C5SC &= ~FTM_CSC_CHF;
+  FTM0_C5SC |= FTM_CSC_CHIE;
+  break;
+  }
 }
 
 void PWM_BrakeModeEnd()
@@ -160,3 +275,7 @@ void PWM_DisableChannel()  // PWM abschalten
   FTM0_C5V = 0;
   FTM0_PWMLOAD |= FTM_PWMLOAD_LDOK;
 }
+
+
+
+

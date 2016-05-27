@@ -1,2 +1,0 @@
-Removed Pin From Net: NetName=GND Pin=U1-49
-Change Component DesignItemId : Designator=U2 Old DesignItemId=TEENSY_3.0_ALLANALOGPINS New DesignItemId=TEENSY_3.0+4
