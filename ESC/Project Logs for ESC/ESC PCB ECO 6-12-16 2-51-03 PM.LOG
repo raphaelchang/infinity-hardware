@@ -1,0 +1,22 @@
+Removed Pin From Net: NetName=VCC Pin=C22-1
+Removed Pin From Net: NetName=GND Pin=C22-2
+Removed Pin From Net: NetName=VDD Pin=D3-1
+Removed Pin From Net: NetName=SA Pin=D9-1
+Removed Pin From Net: NetName=GND Pin=D9-2
+Removed Pin From Net: NetName=NetQ4_2 Pin=R13-1
+Change Component Comment : Designator=D3 Old Comment=TVS 50V New Comment=MMSZ5262BT1G
+Change Component Designator: OldDesignator=D10 NewDesignator=D9
+Change Component Description : Designator=D3 Old Description=Transient Voltage Suppressor, 6.40 to 231 V, 45 V Stand-off Voltage, Uni-Directional, -55 to 155 degC, 2-pin DO-214AC, Pb-Free, Tape and Reel New Description=Zener Voltage Regulator, 500 mW, 2-Pin SOD-123, Pb-Free, Tape and Reel
+Added Component: Designator=C37(CAPC0402(1005)60_M)
+Added Component: Designator=D10(VISH-DO-214AC-2_N)
+Added Component: Designator=R27(RESC0603(1608)_N)
+Added Pin To Net: NetName=GND Pin=C22-1
+Added Pin To Net: NetName=NetC22_2 Pin=C22-2
+Added Pin To Net: NetName=VCC Pin=C22-1
+Added Pin To Net: NetName=GND Pin=C22-2
+Added Pin To Net: NetName=SA Pin=D3-1
+Added Pin To Net: NetName=VDD Pin=D3-1
+Added Pin To Net: NetName=GND Pin=D3-2
+Added Pin To Net: NetName=GND Pin=R13-1
+Added Pin To Net: NetName=NetQ4_2 Pin=R13-1
+Added Pin To Net: NetName=GLA Pin=R13-2

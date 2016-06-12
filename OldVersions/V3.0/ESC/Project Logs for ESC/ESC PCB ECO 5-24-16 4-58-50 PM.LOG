@@ -1,0 +1,348 @@
+Removed Pin From Net: NetName=GND Pin=C6-2
+Removed Pin From Net: NetName=SA Pin=C7-1
+Removed Pin From Net: NetName=VDD Pin=C7-2
+Removed Pin From Net: NetName=SB Pin=C8-1
+Removed Pin From Net: NetName=VDD Pin=C8-2
+Removed Pin From Net: NetName=GND Pin=C9-1
+Removed Pin From Net: NetName=VCC Pin=C9-2
+Removed Pin From Net: NetName=VCC Pin=C10-2
+Removed Pin From Net: NetName=SC Pin=C29-1
+Removed Pin From Net: NetName=VDD Pin=C29-2
+Removed Pin From Net: NetName=GND Pin=C30-1
+Removed Pin From Net: NetName=SA Pin=C30-2
+Removed Pin From Net: NetName=GND Pin=C36-1
+Removed Pin From Net: NetName=SB Pin=C36-2
+Removed Pin From Net: NetName=GND Pin=C37-1
+Removed Pin From Net: NetName=SC Pin=C37-2
+Removed Pin From Net: NetName=GND Pin=C39-1
+Removed Pin From Net: NetName=C1 Pin=C39-2
+Removed Pin From Net: NetName=GND Pin=C40-1
+Removed Pin From Net: NetName=C2 Pin=C40-2
+Removed Pin From Net: NetName=GND Pin=C41-1
+Removed Pin From Net: NetName=VCC Pin=C41-2
+Removed Pin From Net: NetName=VDD Pin=D2-1
+Removed Pin From Net: NetName=GND Pin=D2-2
+Removed Pin From Net: NetName=GND Pin=D3-C
+Removed Pin From Net: NetName=GND Pin=D4-C
+Removed Pin From Net: NetName=GND Pin=D5-C
+Removed Pin From Net: NetName=CLK Pin=JP2-5
+Removed Pin From Net: NetName=CS Pin=JP2-6
+Removed Pin From Net: NetName=GND Pin=Q4-2
+Removed Pin From Net: NetName=GND Pin=Q4-2
+Removed Pin From Net: NetName=GND Pin=Q4-2
+Removed Pin From Net: NetName=GND Pin=Q4-2
+Removed Pin From Net: NetName=GND Pin=Q4-2
+Removed Pin From Net: NetName=GND Pin=Q5-2
+Removed Pin From Net: NetName=GND Pin=Q5-2
+Removed Pin From Net: NetName=GND Pin=Q5-2
+Removed Pin From Net: NetName=GND Pin=Q5-2
+Removed Pin From Net: NetName=GND Pin=Q5-2
+Removed Pin From Net: NetName=GND Pin=Q6-2
+Removed Pin From Net: NetName=GND Pin=Q6-2
+Removed Pin From Net: NetName=GND Pin=Q6-2
+Removed Pin From Net: NetName=GND Pin=Q6-2
+Removed Pin From Net: NetName=GND Pin=Q6-2
+Removed Pin From Net: NetName=VDD Pin=R5-2
+Removed Pin From Net: NetName=GND Pin=R6-2
+Removed Pin From Net: NetName=VDD Pin=R10-2
+Removed Pin From Net: NetName=SB Pin=R11-2
+Removed Pin From Net: NetName=SC Pin=R12-2
+Removed Pin From Net: NetName=VCC Pin=U7-2
+Removed Pin From Net: NetName=GND Pin=U7-3
+Removed Pin From Net: NetName=C2 Pin=U7-4
+Removed Pin From Net: NetName=C1 Pin=U7-5
+Removed Pin From Net: NetName=SB Pin=U8-1
+Removed Pin From Net: NetName=SC Pin=U9-1
+Removed Member From Class: ClassName=U_Power Member=C7
+Removed Member From Class: ClassName=U_Power Member=C8
+Removed Member From Class: ClassName=U_Power Member=C29
+Removed Member From Class: ClassName=U_Power Member=C36
+Removed Member From Class: ClassName=U_Power Member=C37
+Removed Member From Class: ClassName=U_MCU Member=C39
+Removed Member From Class: ClassName=U_MCU Member=C40
+Removed Member From Class: ClassName=U_MCU Member=C41
+Removed Member From Class: ClassName=U_Power Member=D2
+Removed Member From Class: ClassName=U_MCU Member=D3
+Removed Member From Class: ClassName=U_MCU Member=D4
+Removed Member From Class: ClassName=U_MCU Member=D5
+Removed Member From Class: ClassName=U_MCU Member=R4
+Change Component DesignItemId : Designator=D2 Old DesignItemId=CMP-0548-00253-1 New DesignItemId=WS2812B
+Change Component DesignItemId : Designator=R1 Old DesignItemId=CMP-1012-00026-1 New DesignItemId=CMP-1011-00026-1
+Change Component DesignItemId : Designator=R2 Old DesignItemId=CMP-1012-00030-1 New DesignItemId=CMP-1011-00034-1
+Change Component DesignItemId : Designator=R4 Old DesignItemId=CMP-1012-00054-1 New DesignItemId=CMP-1011-00146-1
+Change Component DesignItemId : Designator=R3 Old DesignItemId=CMP-1012-00056-1 New DesignItemId=CMP-1011-00034-1
+Change Component DesignItemId : Designator=R17 Old DesignItemId=CMP-1012-00088-1 New DesignItemId=CMP-1011-00576-1
+Change Component DesignItemId : Designator=R6 Old DesignItemId=CMP-1012-00098-1 New DesignItemId=CMP-1011-00090-1
+Change Component DesignItemId : Designator=R16 Old DesignItemId=CMP-1012-00111-1 New DesignItemId=CMP-1011-00685-1
+Change Component DesignItemId : Designator=R5 Old DesignItemId=CMP-1012-00129-1 New DesignItemId=CMP-1011-00098-1
+Change Component DesignItemId : Designator=R10 Old DesignItemId=CMP-1012-00146-1 New DesignItemId=Shunt
+Change Component DesignItemId : Designator=C9 Old DesignItemId=CMP-1035-02577-1 New DesignItemId=CMP-1034-02060-1
+Change Component DesignItemId : Designator=C10 Old DesignItemId=CMP-1035-02577-1 New DesignItemId=CMP-1034-02060-1
+Change Component DesignItemId : Designator=C30 Old DesignItemId=CMP-1035-02591-1 New DesignItemId=AVX-CAP-P-2
+Change Component DesignItemId : Designator=C7 Old DesignItemId=CMP-1035-02591-1 New DesignItemId=CMP-1034-01906-1
+Change Component DesignItemId : Designator=C8 Old DesignItemId=CMP-1035-02591-1 New DesignItemId=CMP-1034-01906-1
+Change Component DesignItemId : Designator=C29 Old DesignItemId=CMP-1035-02591-1 New DesignItemId=CMP-1034-02060-1
+Change Component DesignItemId : Designator=C6 Old DesignItemId=CMP-1035-02591-1 New DesignItemId=CMP-1034-02136-1
+Change Component DesignItemId : Designator=C18 Old DesignItemId=CMP-1035-02736-1 New DesignItemId=CMP-1034-02119-1
+Change Component DesignItemId : Designator=C19 Old DesignItemId=CMP-1035-02736-1 New DesignItemId=CMP-1034-02119-1
+Change Component DesignItemId : Designator=C20 Old DesignItemId=CMP-1035-02736-1 New DesignItemId=CMP-1034-02119-1
+Change Component DesignItemId : Designator=C1 Old DesignItemId=CMP-1035-02762-1 New DesignItemId=CMP-1034-02125-1
+Change Component DesignItemId : Designator=C2 Old DesignItemId=CMP-1035-02762-1 New DesignItemId=CMP-1034-02125-1
+Change Component DesignItemId : Designator=C3 Old DesignItemId=CMP-1035-02762-1 New DesignItemId=CMP-1034-02125-1
+Change Component DesignItemId : Designator=C4 Old DesignItemId=CMP-1035-02762-1 New DesignItemId=CMP-1034-02125-1
+Change Component DesignItemId : Designator=C5 Old DesignItemId=CMP-1035-02762-1 New DesignItemId=CMP-1034-02125-1
+Change Component DesignItemId : Designator=C15 Old DesignItemId=CMP-1035-02796-1 New DesignItemId=CMP-1034-02138-1
+Change Component DesignItemId : Designator=JP2 Old DesignItemId=JST_7_VERT New DesignItemId=JST_8_VERT
+Change Component DesignItemId : Designator=U1 Old DesignItemId=MC-ARM-STM32F4X5-SQ64 New DesignItemId=CMP-0243-00089-2
+Change Component Footprint: Designator=C1 Old Footprint=CAPC0603(1608)55_N New Footprint=CAPC0402(1005)60_L
+Change Component Footprint: Designator=C2 Old Footprint=CAPC0603(1608)55_N New Footprint=CAPC0402(1005)60_L
+Change Component Footprint: Designator=C3 Old Footprint=CAPC0603(1608)55_N New Footprint=CAPC0402(1005)60_L
+Change Component Footprint: Designator=C4 Old Footprint=CAPC0603(1608)55_N New Footprint=CAPC0402(1005)60_L
+Change Component Footprint: Designator=C5 Old Footprint=CAPC0603(1608)55_N New Footprint=CAPC0402(1005)60_L
+Change Component Footprint: Designator=C30 Old Footprint=CAPC0603(1608)100_L New Footprint=AVX-CAPC7343_V
+Change Component Footprint: Designator=C6 Old Footprint=CAPC0603(1608)100_L New Footprint=CAPC0402(1005)60_L
+Change Component Footprint: Designator=C7 Old Footprint=CAPC0603(1608)100_L New Footprint=CAPC0402(1005)60_L
+Change Component Footprint: Designator=C8 Old Footprint=CAPC0603(1608)100_L New Footprint=CAPC0402(1005)60_L
+Change Component Footprint: Designator=C9 Old Footprint=CAPC0603(1608)100_L New Footprint=CAPC0402(1005)60_L
+Change Component Footprint: Designator=C15 Old Footprint=CAPC0603(1608)100_L New Footprint=CAPC0402(1005)60_L
+Change Component Footprint: Designator=C18 Old Footprint=CAPC0603(1608)100_L New Footprint=CAPC0402(1005)60_L
+Change Component Footprint: Designator=C19 Old Footprint=CAPC0603(1608)100_L New Footprint=CAPC0402(1005)60_L
+Change Component Footprint: Designator=C20 Old Footprint=CAPC0603(1608)100_L New Footprint=CAPC0402(1005)60_L
+Change Component Footprint: Designator=C29 Old Footprint=CAPC0603(1608)100_L New Footprint=CAPC0402(1005)60_L
+Change Component Footprint: Designator=C10 Old Footprint=CAPC0603(1608)100_L New Footprint=CAPC0402(1005)60_M
+Change Component Footprint: Designator=C11 Old Footprint=CAPC0603(1608)100_L New Footprint=CAPC0603(1608)100_N
+Change Component Footprint: Designator=C16 Old Footprint=CAPC1210(3225)280_L New Footprint=CAPC1210(3225)280_N
+Change Component Footprint: Designator=C17 Old Footprint=CAPC1210(3225)280_L New Footprint=CAPC1210(3225)280_N
+Change Component Footprint: Designator=JP2 Old Footprint=JST-7-PTH-VERT New Footprint=JST-8-PTH-VERT
+Change Component Footprint: Designator=U2 Old Footprint=MUY08A_L New Footprint=MUY08A_N
+Change Component Footprint: Designator=R16 Old Footprint=RESC0603(1608)_L New Footprint=RESC0402(1005)_L
+Change Component Footprint: Designator=R17 Old Footprint=RESC0603(1608)_L New Footprint=RESC0402(1005)_L
+Change Component Footprint: Designator=R10 Old Footprint=RESC0603(1608)_L New Footprint=Shunt
+Change Component Footprint: Designator=R1 Old Footprint=RESC0603(1608)_N New Footprint=RESC0402(1005)_L
+Change Component Footprint: Designator=R4 Old Footprint=RESC0603(1608)_N New Footprint=RESC0402(1005)_L
+Change Component Footprint: Designator=R6 Old Footprint=RESC0603(1608)_N New Footprint=RESC0402(1005)_L
+Change Component Footprint: Designator=R2 Old Footprint=RESC0603(1608)_N New Footprint=RESC0402(1005)_M
+Change Component Footprint: Designator=R3 Old Footprint=RESC0603(1608)_N New Footprint=RESC0402(1005)_M
+Change Component Footprint: Designator=R5 Old Footprint=RESC0603(1608)_N New Footprint=RESC0402(1005)_N
+Change Component Footprint: Designator=U3 Old Footprint=SOT-223_L New Footprint=SOT-223_M
+Change Component Footprint: Designator=U1 Old Footprint=STM-LQFP64_N New Footprint=STM-LQFP64_L
+Change Component Comment : Designator=C6 Old Comment=0.1uF New Comment=4.7uF
+Change Component Comment : Designator=C10 Old Comment=0.1uF New Comment=100nF
+Change Component Comment : Designator=R10 Old Comment=1M New Comment=
+Change Component Comment : Designator=R6 Old Comment=10K New Comment=4K7
+Change Component Comment : Designator=R2 Old Comment=15R New Comment=22R
+Change Component Comment : Designator=C29 Old Comment=100nF New Comment=0.1uF
+Change Component Comment : Designator=C7 Old Comment=100nF New Comment=15pF
+Change Component Comment : Designator=C8 Old Comment=100nF New Comment=15pF
+Change Component Comment : Designator=C30 Old Comment=100nF New Comment=100uF
+Change Component Comment : Designator=R4 Old Comment=150R New Comment=1M
+Change Component Comment : Designator=R3 Old Comment=180R New Comment=22R
+Change Component Comment : Designator=R5 Old Comment=200K New Comment=10K
+Change Component Comment : Designator=JP2 Old Comment=Encoder Pins New Comment=Encoder
+Change Component Comment : Designator=U4 Old Comment=LT-LTC444X-MS8E-8 New Comment=LTC4444
+Change Component Comment : Designator=U5 Old Comment=LT-LTC444X-MS8E-8 New Comment=LTC4444
+Change Component Comment : Designator=U6 Old Comment=LT-LTC444X-MS8E-8 New Comment=LTC4444
+Change Component Comment : Designator=U1 Old Comment=MC-ARM-STM32F4X5-SQ64 New Comment=STM32F405RGT7TR
+Change Component Comment : Designator=D2 Old Comment=TVS 50V New Comment=WS2812B
+Change Component Designator: OldDesignator=U8 NewDesignator=U7
+Change Component Designator: OldDesignator=U9 NewDesignator=U8
+Change Component Description : Designator=D2 Old Description=Transient Voltage Suppressor, 6.40 to 231 V, 45 V Stand-off Voltage, Uni-Directional, -55 to 155 degC, 2-pin DO-214AC, Pb-Free, Tape and Reel New Description=
+Change Component Library : Designator=D2 Old Library=Altium Content Vault New Library=Components.SchLib
+Added Component: Designator=C13(CAPC0402(1005)60_L)
+Added Component: Designator=C14(CAPC0402(1005)60_L)
+Added Component: Designator=C21(CAPC0402(1005)60_L)
+Added Component: Designator=C22(CAPC0402(1005)60_L)
+Added Component: Designator=C23(CAPC0402(1005)60_L)
+Added Component: Designator=C24(CAPC0402(1005)60_L)
+Added Component: Designator=JP4(JST-4-PTH-VERT)
+Added Component: Designator=JP5(JST-4-PTH-VERT)
+Added Component: Designator=R18(RESC0402(1005)_L)
+Added Component: Designator=R19(RESC0402(1005)_N)
+Added Component: Designator=R20(RESC0402(1005)_L)
+Added Component: Designator=U9(MSOP-8)
+Added Component: Designator=U10(SOT65P280X145-6N)
+Added Pin To Net: NetName=GND Pin=C6-1
+Added Pin To Net: NetName=VCC Pin=C6-2
+Added Pin To Net: NetName=GND Pin=C7-2
+Added Pin To Net: NetName=GND Pin=C8-2
+Added Pin To Net: NetName=VCC Pin=C9-1
+Added Pin To Net: NetName=GND Pin=C9-2
+Added Pin To Net: NetName=GND Pin=C13-1
+Added Pin To Net: NetName=GND Pin=C14-1
+Added Pin To Net: NetName=VCC Pin=C21-1
+Added Pin To Net: NetName=GND Pin=C21-2
+Added Pin To Net: NetName=VCC Pin=C22-1
+Added Pin To Net: NetName=GND Pin=C22-2
+Added Pin To Net: NetName=GND Pin=C23-1
+Added Pin To Net: NetName=C1 Pin=C23-2
+Added Pin To Net: NetName=GND Pin=C24-1
+Added Pin To Net: NetName=C2 Pin=C24-2
+Added Pin To Net: NetName=GND Pin=C29-1
+Added Pin To Net: NetName=VCC Pin=C30-1
+Added Pin To Net: NetName=GND Pin=C30-2
+Added Pin To Net: NetName=VCC Pin=D2-1
+Added Pin To Net: NetName=VCC Pin=JP1-4
+Added Pin To Net: NetName=CLK Pin=JP2-6
+Added Pin To Net: NetName=CS Pin=JP2-7
+Added Pin To Net: NetName=VCC Pin=JP2-8
+Added Pin To Net: NetName=VDD Pin=R4-2
+Added Pin To Net: NetName=GND Pin=R5-1
+Added Pin To Net: NetName=GND Pin=R10-1
+Added Pin To Net: NetName=GND Pin=R11-1
+Added Pin To Net: NetName=GND Pin=R12-1
+Added Pin To Net: NetName=VDD Pin=R18-2
+Added Pin To Net: NetName=GND Pin=R19-1
+Added Pin To Net: NetName=GND Pin=R20-1
+Added Pin To Net: NetName=VCC Pin=U1-1
+Added Pin To Net: NetName=GND Pin=U1-12
+Added Pin To Net: NetName=VCC Pin=U1-13
+Added Pin To Net: NetName=C1 Pin=U1-14
+Added Pin To Net: NetName=C2 Pin=U1-15
+Added Pin To Net: NetName=GND Pin=U1-18
+Added Pin To Net: NetName=VCC Pin=U1-19
+Added Pin To Net: NetName=CS Pin=U1-20
+Added Pin To Net: NetName=CLK Pin=U1-21
+Added Pin To Net: NetName=GND Pin=U1-28
+Added Pin To Net: NetName=VCC Pin=U1-32
+Added Pin To Net: NetName=QUAD_A Pin=U1-37
+Added Pin To Net: NetName=QUAD_B Pin=U1-38
+Added Pin To Net: NetName=VCC Pin=U1-48
+Added Pin To Net: NetName=SER_TX Pin=U1-51
+Added Pin To Net: NetName=SER_RX Pin=U1-52
+Added Pin To Net: NetName=GND Pin=U1-63
+Added Pin To Net: NetName=VCC Pin=U1-64
+Added Pin To Net: NetName=GND Pin=U7-8
+Added Pin To Net: NetName=GND Pin=U8-8
+Added Pin To Net: NetName=GND Pin=U9-2
+Added Pin To Net: NetName=GND Pin=U9-3
+Added Pin To Net: NetName=VCC Pin=U9-6
+Added Pin To Net: NetName=VCC Pin=U9-7
+Added Pin To Net: NetName=GND Pin=U9-8
+Added Pin To Net: NetName=GND Pin=U10-2
+Added Pin To Net: NetName=VCC Pin=U10-3
+Added Pin To Net: NetName=C3 Pin=C29-2
+Added Pin To Net: NetName=C3 Pin=U1-16
+Added Pin To Net: NetName=C3 Pin=U9-5
+Added Net: Name=C3
+Added Pin To Net: NetName=CAN_RX Pin=U1-61
+Added Pin To Net: NetName=CAN_RX Pin=U10-4
+Added Net: Name=CAN_RX
+Added Pin To Net: NetName=CAN_TX Pin=U1-62
+Added Pin To Net: NetName=CAN_TX Pin=U10-1
+Added Net: Name=CAN_TX
+Added Pin To Net: NetName=CANH Pin=JP4-2
+Added Pin To Net: NetName=CANH Pin=JP5-2
+Added Pin To Net: NetName=CANH Pin=U10-7
+Added Net: Name=CANH
+Added Pin To Net: NetName=CANL Pin=JP4-1
+Added Pin To Net: NetName=CANL Pin=JP5-1
+Added Pin To Net: NetName=CANL Pin=U10-6
+Added Net: Name=CANL
+Added Pin To Net: NetName=LED Pin=U1-58
+Added Net: Name=LED
+Added Pin To Net: NetName=MISO Pin=JP2-5
+Added Pin To Net: NetName=MISO Pin=U1-22
+Added Net: Name=MISO
+Added Pin To Net: NetName=MOSI Pin=JP2-4
+Added Pin To Net: NetName=MOSI Pin=U1-23
+Added Net: Name=MOSI
+Added Pin To Net: NetName=NetC7_1 Pin=C7-1
+Added Pin To Net: NetName=NetC7_1 Pin=U1-5
+Added Net: Name=NetC7_1
+Added Pin To Net: NetName=NetC8_1 Pin=C8-1
+Added Pin To Net: NetName=NetC8_1 Pin=U1-6
+Added Net: Name=NetC8_1
+Added Pin To Net: NetName=NetC10_2 Pin=C10-2
+Added Pin To Net: NetName=NetC10_2 Pin=U1-7
+Added Net: Name=NetC10_2
+Added Pin To Net: NetName=NetC13_2 Pin=C13-2
+Added Pin To Net: NetName=NetC13_2 Pin=U1-47
+Added Net: Name=NetC13_2
+Added Pin To Net: NetName=NetC14_2 Pin=C14-2
+Added Pin To Net: NetName=NetC14_2 Pin=U1-31
+Added Net: Name=NetC14_2
+Added Pin To Net: NetName=NetQ4_3 Pin=Q4-2
+Added Pin To Net: NetName=NetQ4_3 Pin=Q4-2
+Added Pin To Net: NetName=NetQ4_3 Pin=Q4-2
+Added Pin To Net: NetName=NetQ4_3 Pin=Q4-2
+Added Pin To Net: NetName=NetQ4_3 Pin=Q4-2
+Added Pin To Net: NetName=NetQ4_3 Pin=R10-2
+Added Pin To Net: NetName=NetQ4_3 Pin=U7-1
+Added Net: Name=NetQ4_3
+Added Pin To Net: NetName=NetQ5_3 Pin=Q5-2
+Added Pin To Net: NetName=NetQ5_3 Pin=Q5-2
+Added Pin To Net: NetName=NetQ5_3 Pin=Q5-2
+Added Pin To Net: NetName=NetQ5_3 Pin=Q5-2
+Added Pin To Net: NetName=NetQ5_3 Pin=Q5-2
+Added Pin To Net: NetName=NetQ5_3 Pin=R11-2
+Added Pin To Net: NetName=NetQ5_3 Pin=U8-1
+Added Net: Name=NetQ5_3
+Added Pin To Net: NetName=NetQ6_3 Pin=Q6-2
+Added Pin To Net: NetName=NetQ6_3 Pin=Q6-2
+Added Pin To Net: NetName=NetQ6_3 Pin=Q6-2
+Added Pin To Net: NetName=NetQ6_3 Pin=Q6-2
+Added Pin To Net: NetName=NetQ6_3 Pin=Q6-2
+Added Pin To Net: NetName=NetQ6_3 Pin=R12-2
+Added Pin To Net: NetName=NetQ6_3 Pin=U9-1
+Added Net: Name=NetQ6_3
+Added Pin To Net: NetName=NetR2_2 Pin=R2-2
+Added Pin To Net: NetName=NetR2_2 Pin=U1-44
+Added Net: Name=NetR2_2
+Added Pin To Net: NetName=NetR3_2 Pin=R3-2
+Added Pin To Net: NetName=NetR3_2 Pin=U1-45
+Added Net: Name=NetR3_2
+Added Pin To Net: NetName=NetR4_1 Pin=R4-1
+Added Pin To Net: NetName=NetR4_1 Pin=U2-1
+Added Net: Name=NetR4_1
+Added Pin To Net: NetName=NetR5_2 Pin=R5-2
+Added Pin To Net: NetName=NetR5_2 Pin=U1-60
+Added Net: Name=NetR5_2
+Added Pin To Net: NetName=NetR6_1 Pin=R6-1
+Added Pin To Net: NetName=NetR6_1 Pin=R20-2
+Added Pin To Net: NetName=NetR6_1 Pin=U1-17
+Added Net: Name=NetR6_1
+Added Pin To Net: NetName=NetR18_1 Pin=R18-1
+Added Pin To Net: NetName=NetR18_1 Pin=R19-2
+Added Pin To Net: NetName=NetR18_1 Pin=U1-8
+Added Net: Name=NetR18_1
+Added Pin To Net: NetName=NetU1_34 Pin=U1-34
+Added Pin To Net: NetName=NetU1_34 Pin=U4-2
+Added Net: Name=NetU1_34
+Added Pin To Net: NetName=NetU1_35 Pin=U1-35
+Added Pin To Net: NetName=NetU1_35 Pin=U5-2
+Added Net: Name=NetU1_35
+Added Pin To Net: NetName=NetU1_36 Pin=U1-36
+Added Pin To Net: NetName=NetU1_36 Pin=U6-2
+Added Net: Name=NetU1_36
+Added Pin To Net: NetName=NetU1_41 Pin=U1-41
+Added Pin To Net: NetName=NetU1_41 Pin=U4-1
+Added Net: Name=NetU1_41
+Added Pin To Net: NetName=NetU1_42 Pin=U1-42
+Added Pin To Net: NetName=NetU1_42 Pin=U5-1
+Added Net: Name=NetU1_42
+Added Pin To Net: NetName=NetU1_43 Pin=U1-43
+Added Pin To Net: NetName=NetU1_43 Pin=U6-1
+Added Net: Name=NetU1_43
+Added Pin To Net: NetName=USB_DM Pin=R2-1
+Added Net: Name=USB_DM
+Added Pin To Net: NetName=USB_DP Pin=R3-1
+Added Net: Name=USB_DP
+Added Pin To Net: NetName=USB_PWR Pin=R6-2
+Added Net: Name=USB_PWR
+Added Member To Class: ClassName=U_MCU Member=Component C7 15pF
+Added Member To Class: ClassName=U_MCU Member=Component C8 15pF
+Added Member To Class: ClassName=U_MCU Member=Component C13 2.2uF
+Added Member To Class: ClassName=U_MCU Member=Component C14 2.2uF
+Added Member To Class: ClassName=U_MCU Member=Component C21 0.1uF
+Added Member To Class: ClassName=U_MCU Member=Component C22 0.1uF
+Added Member To Class: ClassName=U_MCU Member=Component C23 0.1uF
+Added Member To Class: ClassName=U_MCU Member=Component C24 0.1uF
+Added Member To Class: ClassName=U_MCU Member=Component C29 0.1uF
+Added Member To Class: ClassName=U_MCU Member=Component D2 WS2812B
+Added Member To Class: ClassName=ESC Member=Component JP4 
+Added Member To Class: ClassName=ESC Member=Component JP5 
+Added Member To Class: ClassName=U_Power Member=Component R4 1M
+Added Member To Class: ClassName=U_MCU Member=Component R18 200K
+Added Member To Class: ClassName=U_MCU Member=Component R19 10K
+Added Member To Class: ClassName=U_MCU Member=Component R20 9K1
+Added Member To Class: ClassName=U_MCU Member=Component U10 TCAN332

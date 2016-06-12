@@ -1,0 +1,4 @@
+Change Component Footprint: Designator=JP4 Old Footprint=JST-4-PTH-VERT New Footprint=JST-2-PTH-VERT
+Change Component Footprint: Designator=JP5 Old Footprint=JST-4-PTH-VERT New Footprint=JST-2-PTH-VERT
+Change Component Comment : Designator=JP4 Old Comment= New Comment=Header 5Standard 5-pin 0.1" header. Use with straight break away headers (SKU : PRT-00116), right angle break away headers (PRT-00553), swiss pins (PRT-00743), machine pins (PRT-00117), and female headers (PRT-00115). Molex polarized connector foot print use with SKU : PRT-08230 with associated crimp pins and housings.
+Change Component Comment : Designator=JP5 Old Comment= New Comment=Header 5Standard 5-pin 0.1" header. Use with straight break away headers (SKU : PRT-00116), right angle break away headers (PRT-00553), swiss pins (PRT-00743), machine pins (PRT-00117), and female headers (PRT-00115). Molex polarized connector foot print use with SKU : PRT-08230 with associated crimp pins and housings.

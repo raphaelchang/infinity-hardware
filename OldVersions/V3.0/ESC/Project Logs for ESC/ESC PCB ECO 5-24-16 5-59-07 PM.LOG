@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=NetQ4_3 Pin=U7-1
+Removed Pin From Net: NetName=GND Pin=U7-8
+Removed Pin From Net: NetName=NetQ5_3 Pin=U8-1
+Removed Pin From Net: NetName=GND Pin=U8-8
+Removed Pin From Net: NetName=NetQ6_3 Pin=U9-1
+Removed Pin From Net: NetName=GND Pin=U9-8
+Change Component Comment : Designator=JP4 Old Comment=Header 5Standard 5-pin 0.1" header. Use with straight break away headers (SKU : PRT-00116), right angle break away headers (PRT-00553), swiss pins (PRT-00743), machine pins (PRT-00117), and female headers (PRT-00115). Molex polarized connector foot print use with SKU : PRT-08230 with associated crimp pins and housings. New Comment=
+Change Component Comment : Designator=JP5 Old Comment=Header 5Standard 5-pin 0.1" header. Use with straight break away headers (SKU : PRT-00116), right angle break away headers (PRT-00553), swiss pins (PRT-00743), machine pins (PRT-00117), and female headers (PRT-00115). Molex polarized connector foot print use with SKU : PRT-08230 with associated crimp pins and housings. New Comment=
+Added Pin To Net: NetName=GND Pin=U7-1
+Added Pin To Net: NetName=NetQ4_3 Pin=U7-8
+Added Pin To Net: NetName=GND Pin=U8-1
+Added Pin To Net: NetName=NetQ5_3 Pin=U8-8
+Added Pin To Net: NetName=GND Pin=U9-1
+Added Pin To Net: NetName=NetQ6_3 Pin=U9-8

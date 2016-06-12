@@ -1,0 +1,6 @@
+Change Component DesignItemId : Designator=C18 Old DesignItemId=CMP-1034-02119-1 New DesignItemId=CMP-1035-02736-1
+Change Component DesignItemId : Designator=C19 Old DesignItemId=CMP-1034-02119-1 New DesignItemId=CMP-1035-02736-1
+Change Component DesignItemId : Designator=C20 Old DesignItemId=CMP-1034-02119-1 New DesignItemId=CMP-1035-02736-1
+Change Component Footprint: Designator=C18 Old Footprint=CAPC0402(1005)60_L New Footprint=CAPC0603(1608)100_L
+Change Component Footprint: Designator=C19 Old Footprint=CAPC0402(1005)60_L New Footprint=CAPC0603(1608)100_L
+Change Component Footprint: Designator=C20 Old Footprint=CAPC0402(1005)60_L New Footprint=CAPC0603(1608)100_L
