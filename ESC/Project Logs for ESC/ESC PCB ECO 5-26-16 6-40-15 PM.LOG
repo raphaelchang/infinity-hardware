@@ -1,8 +1,0 @@
-Added Component: Designator=R24(RESC0402(1005)_L)
-Added Component: Designator=R25(RESC0402(1005)_L)
-Added Pin To Net: NetName=SER_TX Pin=R24-1
-Added Pin To Net: NetName=VCC Pin=R24-2
-Added Pin To Net: NetName=SER_RX Pin=R25-1
-Added Pin To Net: NetName=VCC Pin=R25-2
-Added Member To Class: ClassName=U_MCU Member=Component R24 4K7
-Added Member To Class: ClassName=U_MCU Member=Component R25 4K7

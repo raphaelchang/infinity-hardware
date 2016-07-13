@@ -1,6 +1,0 @@
-Removed Pin From Net: NetName=SER_TX Pin=U1-51
-Removed Pin From Net: NetName=SER_RX Pin=U1-52
-Removed Pin From Net: NetName=LED Pin=U1-58
-Added Pin To Net: NetName=LED Pin=U1-26
-Added Pin To Net: NetName=SER_TX Pin=U1-58
-Added Pin To Net: NetName=SER_RX Pin=U1-59

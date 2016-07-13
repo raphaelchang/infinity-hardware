@@ -1,7 +1,0 @@
-Added Component: Designator=C23(CAPC0402(1005)60_L)
-Added Pin To Net: NetName=VDD Pin=C23-1
-Added Pin To Net: NetName=NetC23_2 Pin=C23-2
-Added Pin To Net: NetName=NetC23_2 Pin=R4-1
-Added Pin To Net: NetName=NetC23_2 Pin=U2-1
-Added Net: Name=NetC23_2
-Added Member To Class: ClassName=U_Power Member=Component C23 1nF

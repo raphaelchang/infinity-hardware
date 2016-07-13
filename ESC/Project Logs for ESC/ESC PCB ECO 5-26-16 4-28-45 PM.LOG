@@ -1,4 +1,0 @@
-Added Component: Designator=R23(RESC0402(1005)_L)
-Added Pin To Net: NetName=CANL Pin=R23-1
-Added Pin To Net: NetName=CANH Pin=R23-2
-Added Member To Class: ClassName=U_MCU Member=Component R23 120R

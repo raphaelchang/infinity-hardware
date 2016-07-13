@@ -1,8 +1,0 @@
-Removed Pin From Net: NetName=VDD Pin=R18-2
-Removed Pin From Net: NetName=NetR6_1 Pin=U1-17
-Added Pin To Net: NetName=VDD Pin=R18-1
-Added Pin To Net: NetName=NetR6_1 Pin=U1-24
-Added Pin To Net: NetName=NetR18_2 Pin=R18-2
-Added Pin To Net: NetName=NetR18_2 Pin=R19-2
-Added Pin To Net: NetName=NetR18_2 Pin=U1-27
-Added Net: Name=NetR18_2
