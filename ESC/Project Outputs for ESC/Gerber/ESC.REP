@@ -2,10 +2,10 @@
 FileName = ESC.GBR
 AutoAperture = True
 *************************************************************
-Generating : Top Layer
+Generating : Component Side
       File : ESC.GTL
 
-    Adding Layer      : Top Layer
+    Adding Layer      : Component Side
 
     Adding Layer      : Multi-Layer
 
@@ -51,34 +51,20 @@ Used DCodes :
     D47
     D48
     D49
-    D50
-    D51
-    D52
-    D53
 *************************************************************
 
 *************************************************************
-Generating : Bottom Layer
-      File : ESC.GBL
+Generating : Ground Plane
+      File : ESC.GP1
 
-    Adding Layer      : Bottom Layer
+    Adding Layer      : Ground Plane
 
     Adding Layer      : Multi-Layer
 
 
 Used DCodes :
-    D10
-    D11
-    D14
-    D15
-    D40
-    D41
-    D42
     D43
-    D46
-    D47
-    D48
-    D49
+    D44
     D50
     D51
     D52
@@ -87,6 +73,51 @@ Used DCodes :
     D55
     D56
     D57
+*************************************************************
+
+*************************************************************
+Generating : Power Plane
+      File : ESC.GP2
+
+    Adding Layer      : Power Plane
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D43
+    D44
+    D50
+    D51
+    D52
+    D54
+    D55
+    D56
+    D57
+*************************************************************
+
+*************************************************************
+Generating : Solder Side
+      File : ESC.GBL
+
+    Adding Layer      : Solder Side
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D12
+    D13
+    D26
+    D27
+    D40
+    D42
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
     D58
     D59
     D60
@@ -101,6 +132,11 @@ Used DCodes :
     D69
     D70
     D71
+    D72
+    D73
+    D74
+    D75
+    D76
 *************************************************************
 
 *************************************************************
@@ -111,13 +147,13 @@ Generating : Top Overlay
 
 
 Used DCodes :
-    D40
-    D72
-    D73
-    D74
-    D75
-    D76
+    D42
     D77
+    D78
+    D79
+    D80
+    D81
+    D82
 *************************************************************
 
 *************************************************************
@@ -126,7 +162,7 @@ Generating : Top Paste
 
     Adding Layer      : Top Paste
 
-    Adding Layer      : Top Layer
+    Adding Layer      : Component Side
 
     Adding Layer      : Multi-Layer
 
@@ -170,17 +206,13 @@ Generating : Top Solder
 
     Adding Layer      : Top Solder
 
-    Adding Layer      : Top Layer
+    Adding Layer      : Component Side
 
     Adding Layer      : Multi-Layer
 
 
 Used DCodes :
-    D78
-    D79
-    D80
-    D81
-    D82
+    D46
     D83
     D84
     D85
@@ -214,6 +246,7 @@ Used DCodes :
     D113
     D114
     D115
+    D116
 *************************************************************
 
 *************************************************************
@@ -222,21 +255,17 @@ Generating : Bottom Solder
 
     Adding Layer      : Bottom Solder
 
-    Adding Layer      : Bottom Layer
+    Adding Layer      : Solder Side
 
     Adding Layer      : Multi-Layer
 
 
 Used DCodes :
-    D78
-    D79
-    D82
-    D83
-    D108
-    D109
-    D110
-    D111
-    D112
+    D46
+    D85
+    D86
+    D99
+    D100
     D113
     D114
     D115
@@ -258,6 +287,8 @@ Used DCodes :
     D131
     D132
     D133
+    D134
+    D135
 *************************************************************
 
 *************************************************************
@@ -266,20 +297,16 @@ Generating : Bottom Paste
 
     Adding Layer      : Bottom Paste
 
-    Adding Layer      : Bottom Layer
+    Adding Layer      : Solder Side
 
     Adding Layer      : Multi-Layer
 
 
 Used DCodes :
-    D10
-    D11
-    D14
-    D15
-    D54
-    D55
-    D56
-    D57
+    D12
+    D13
+    D26
+    D27
     D58
     D59
     D60
@@ -293,6 +320,11 @@ Used DCodes :
     D68
     D69
     D70
+    D71
+    D72
+    D73
+    D74
+    D75
 *************************************************************
 
 *************************************************************
@@ -303,13 +335,14 @@ Generating : Bottom Overlay
 
 
 Used DCodes :
-    D40
-    D73
-    D74
-    D75
+    D42
     D77
-    D134
-    D135
+    D78
+    D79
+    D80
+    D82
+    D136
+    D137
 *************************************************************
 
 *************************************************************
@@ -320,6 +353,6 @@ Generating : Keep-Out Layer
 
 
 Used DCodes :
-    D40
+    D42
 *************************************************************
 

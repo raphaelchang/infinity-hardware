@@ -1,13 +1,15 @@
 ------------------------------------------------------------------------------------------
-Gerber File Extension Report For: ESC.GBR   7/17/16  11:45:11 PM
+Gerber File Extension Report For: ESC.GBR   7/21/2016  2:32:28 AM
 ------------------------------------------------------------------------------------------
 
 
 ------------------------------------------------------------------------------------------
 Layer Extension     Layer Description                      
 ------------------------------------------------------------------------------------------
-.GTL                Top Layer                               
-.GBL                Bottom Layer                            
+.GTL                Component Side                          
+.GP1                Ground Plane                            
+.GP2                Power Plane                             
+.GBL                Solder Side                             
 .GTO                Top Overlay                             
 .GTP                Top Paste                               
 .GTS                Top Solder                              
