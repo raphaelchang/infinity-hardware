@@ -1,4 +1,4 @@
-DRC Rules Export File for PCB: \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\ESC\ESC.PcbDoc
+DRC Rules Export File for PCB: \\vmware-host\Shared Folders\Documents\resc-hardware\ESC\ESC.PcbDoc
 RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
 RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=6.00
 RuleKind=Width|RuleName=Width|Scope=Board|Minimum=10.00

@@ -112,7 +112,7 @@ Used DCodes :
     D27
     D40
     D42
-    D44
+    D43
     D45
     D46
     D47
@@ -212,7 +212,7 @@ Generating : Top Solder
 
 
 Used DCodes :
-    D46
+    D45
     D83
     D84
     D85
@@ -261,7 +261,7 @@ Generating : Bottom Solder
 
 
 Used DCodes :
-    D46
+    D45
     D85
     D86
     D99
