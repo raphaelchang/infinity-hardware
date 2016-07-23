@@ -106,9 +106,9 @@ Generating : Solder Side
 
 
 Used DCodes :
-    D12
-    D13
-    D26
+    D10
+    D11
+    D14
     D27
     D40
     D42
@@ -212,7 +212,7 @@ Generating : Top Solder
 
 
 Used DCodes :
-    D45
+    D48
     D83
     D84
     D85
@@ -261,10 +261,10 @@ Generating : Bottom Solder
 
 
 Used DCodes :
-    D45
-    D85
-    D86
-    D99
+    D48
+    D83
+    D84
+    D87
     D100
     D113
     D114
@@ -303,9 +303,9 @@ Generating : Bottom Paste
 
 
 Used DCodes :
-    D12
-    D13
-    D26
+    D10
+    D11
+    D14
     D27
     D58
     D59
