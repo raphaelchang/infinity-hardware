@@ -30,7 +30,7 @@ DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
-OutputPath=Project Outputs for rESC
+OutputPath=
 LogFolderPath=
 ManagedProjectGUID=
 
@@ -209,67 +209,7 @@ GenerateClassCluster=0
 DocumentUniqueId=KDUCLVIV
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for ESC\Design Rule Check - ESC.html
-DItemRevisionGUID=
-
-[GeneratedDocument2]
-DocumentPath=Project Outputs for ESC\NC Drill\ESC.DRR
-DItemRevisionGUID=
-
-[GeneratedDocument3]
-DocumentPath=Project Outputs for ESC\Gerber\ESC.EXTREP
-DItemRevisionGUID=
-
-[GeneratedDocument4]
-DocumentPath=Project Outputs for ESC\Gerber\ESC.GBL
-DItemRevisionGUID=
-
-[GeneratedDocument5]
-DocumentPath=Project Outputs for ESC\Gerber\ESC.GBO
-DItemRevisionGUID=
-
-[GeneratedDocument6]
-DocumentPath=Project Outputs for ESC\Gerber\ESC.GBP
-DItemRevisionGUID=
-
-[GeneratedDocument7]
-DocumentPath=Project Outputs for ESC\Gerber\ESC.GBS
-DItemRevisionGUID=
-
-[GeneratedDocument8]
-DocumentPath=Project Outputs for ESC\Gerber\ESC.GKO
-DItemRevisionGUID=
-
-[GeneratedDocument9]
-DocumentPath=Project Outputs for ESC\Gerber\ESC.GTL
-DItemRevisionGUID=
-
-[GeneratedDocument10]
-DocumentPath=Project Outputs for ESC\Gerber\ESC.GTO
-DItemRevisionGUID=
-
-[GeneratedDocument11]
-DocumentPath=Project Outputs for ESC\Gerber\ESC.GTP
-DItemRevisionGUID=
-
-[GeneratedDocument12]
-DocumentPath=Project Outputs for ESC\Gerber\ESC.GTS
-DItemRevisionGUID=
-
-[GeneratedDocument13]
-DocumentPath=Project Outputs for ESC\NC Drill\ESC.LDP
-DItemRevisionGUID=
-
-[GeneratedDocument14]
-DocumentPath=Project Outputs for ESC\Gerber\ESC.REP
-DItemRevisionGUID=
-
-[GeneratedDocument15]
-DocumentPath=Project Outputs for ESC\Gerber\ESC.RUL
-DItemRevisionGUID=
-
-[GeneratedDocument16]
-DocumentPath=Project Outputs for ESC\NC Drill\ESC.TXT
+DocumentPath=Project Outputs for rESC\Design Rule Check - ESC.html
 DItemRevisionGUID=
 
 [Configuration1]
@@ -318,7 +258,7 @@ SCH_HasExpandLogicalToPhysicalSheets=-1
 SaveSettingsToOutJob=-1
 
 [Generic_EDE]
-OutputDir=Project Outputs for rESC
+OutputDir=
 
 [OutputGroup1]
 Name=Netlist Outputs
