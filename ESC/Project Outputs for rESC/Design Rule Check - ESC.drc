@@ -1,62 +1,62 @@
 Protel Design System Design Rule Check
 PCB File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\ESC\ESC.PcbDoc
-Date     : 7/23/2016
-Time     : 8:52:15 PM
+Date     : 8/14/2016
+Time     : 5:22:43 PM
 
-Processing Rule : Room U_12V (Bounding Region = (5966.991mil, 2525mil, 6736.991mil, 3162.5mil) (InComponentClass('U_12V'))
-Rule Violations :0
-
-Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (IsVia)
-Rule Violations :0
-
-Processing Rule : Short-Circuit Constraint (Allowed=Yes) (All),(OnLayer('Keep-Out Layer'))
-Rule Violations :0
-
-Processing Rule : Clearance Constraint (Gap=6mil) (All),(OnLayer('Keep-Out Layer'))
-Rule Violations :0
-
-Processing Rule : Clearance Constraint (Gap=8mil) ((InPolygon AND InNet('GND'))),(All)
-Rule Violations :0
-
-Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
-Rule Violations :0
-
-Processing Rule : Net Antennae (Tolerance=0mil) (All)
-Rule Violations :0
-
-Processing Rule : Silk primitive without silk layer
-Rule Violations :0
-
-Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
-Rule Violations :0
-
-Processing Rule : Hole Size Constraint (Min=1mil) (Max=200mil) (All)
-Rule Violations :0
-
-Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
-Rule Violations :0
-
-Processing Rule : Width Constraint (Min=10mil) (Max=60mil) (Preferred=10mil) (All)
-Rule Violations :0
-
-Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=20mil) (Air Gap=10mil) (Entries=4) (All)
-Rule Violations :0
-
-Processing Rule : Clearance Constraint (Gap=6mil) (All),(All)
-Rule Violations :0
-
-Processing Rule : Un-Routed Net Constraint ( (All) )
-Rule Violations :0
-
-Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Processing Rule : Room U_3V3 (Bounding Region = (5271.991mil, 2345mil, 6021.991mil, 2675mil) (InComponentClass('U_3V3'))
 Rule Violations :0
 
 Processing Rule : Room U_Power (Bounding Region = (5206.991mil, 3120mil, 6766.991mil, 4220mil) (InComponentClass('U_Power'))
 Rule Violations :0
 
-Processing Rule : Room U_3V3 (Bounding Region = (5271.991mil, 2345mil, 6021.991mil, 2675mil) (InComponentClass('U_3V3'))
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=6mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=20mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=10mil) (Max=60mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=200mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk primitive without silk layer
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=8mil) ((InPolygon AND InNet('GND'))),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=6mil) (All),(OnLayer('Keep-Out Layer'))
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=Yes) (All),(OnLayer('Keep-Out Layer'))
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (IsVia)
+Rule Violations :0
+
+Processing Rule : Room U_12V (Bounding Region = (5966.991mil, 2525mil, 6736.991mil, 3162.5mil) (InComponentClass('U_12V'))
 Rule Violations :0
 
 
 Violations Detected : 0
-Time Elapsed        : 00:00:02
+Time Elapsed        : 00:00:03
