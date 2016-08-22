@@ -1,0 +1,23 @@
+#Layer_Color=16711935
+#
+#Feature symbol names
+#
+$0 r118.1102
+
+#
+#Feature attribute names
+#
+@0 .geometry
+@1 .pad_usage
+
+#
+#Feature attribute text strings
+#
+&0 Pad_Simple_X118.1102Y118.1102H122.0472C162.0472
+
+#
+#Layer features
+#
+P 0 -0.48 0 P 0 0 ;0=0,1=0
+P 0 0.48 0 P 0 0 ;0=0,1=0
+P 0.48 0 0 P 0 0 ;0=0,1=0

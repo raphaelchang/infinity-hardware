@@ -1,0 +1,72 @@
+*************************************************************
+FileName = AS5147.PcbDoc
+ODB++ directory structure
+*************************************************************
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\matrix\matrix
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\profile
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\stephdr
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\topoverlay\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\topoverlay\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\toppaste\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\toppaste\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\topsolder\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\topsolder\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\top\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\top\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\bottom\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\bottom\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\bottomsolder\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\bottomsolder\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\bottompaste\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\bottompaste\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\bottomoverlay\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\bottomoverlay\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\drill\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\drill\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\drill\tools
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\keepout\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\keepout\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\mechanical1\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\mechanical1\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\mechanical13\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\mechanical13\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\mechanical15\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\mechanical15\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\comp_+_top\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\layers\comp_+_top\components
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\rESC\resc-hardware\Encoder\AS5147\Project Outputs for AS5147\odb\steps\pcb\eda\data
+
