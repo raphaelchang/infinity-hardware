@@ -68,8 +68,20 @@ OutputDefault3=0
 PageOptions3=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=0|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
 Configuration3_Name1=ColumnNameFormat
 Configuration3_Item1=CaptionAsName
-Configuration3_Name2=OutputConfigurationParameter1
-Configuration3_Item2=perial|IncludeUnconnectedMidLayerPads=False|LayerClassesMirror.Set= |LayerClassesPlot.Set= |LeadingAndTrailingZeroesMode=KeepLeadingAndTrailingZeroes|MaxApertureSize=2500000|MinusApertureTolerance=40|MinusApertureTolerance=40|Mirror.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean|MirrorDrillDrawingPlots=False|MirrorDrillGuidePlots=False|NoRegularPolygons=False|NumberOfDecimals=4|NumberOfDecimals=4|OptimizeChangeLocationCommands=True|OptimizeChangeLocationCommands=True|OriginPosition=Absolute|Panelize=False|Plot.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean,16973830~1,16973832~1,16973834~1,16777217~1,16842751~1,16973835~1,16973833~1,16973831~1,16973837~1|PlotPositivePlaneLayers=False|PlotUsedDrillDrawingLayerPairs=False|PlotUsedDrillGuideLayerPairs=False|PlusApertureTolerance=40|PlusApertureTolerance=40|Record=GerberView|SoftwareArcs=False|Sorted=False|Sorted=False
+Configuration3_Name2=Filter
+Configuration3_Item2=545046300E5446696C74657257726170706572000D46696C7465722E416374697665090F46696C7465722E43726974657269610A04000000000000000000
+Configuration3_Name3=General
+Configuration3_Item3=OpenExported=False|AddToProject=False|ForceFit=False|NotFitted=False|Database=False|DatabasePriority=False|IncludePCBData=True|IncludeVaultData=False|IncludeAlternatives=False|ShowExportOptions=True|TemplateFilename=|BatchMode=5|FormWidth=2181|FormHeight=1506|SupplierProdQty=1|SupplierAutoQty=False|SupplierUseCachedPricing=False|SupplierCurrency=<none>
+Configuration3_Name4=GroupOrder
+Configuration3_Item4=Comment=True|Footprint=True
+Configuration3_Name5=OutputConfigurationParameter1
+Configuration3_Item5=perial|IncludeUnconnectedMidLayerPads=False|LayerClassesMirror.Set= |LayerClassesPlot.Set= |LeadingAndTrailingZeroesMode=KeepLeadingAndTrailingZeroes|MaxApertureSize=2500000|MinusApertureTolerance=40|MinusApertureTolerance=40|Mirror.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean|MirrorDrillDrawingPlots=False|MirrorDrillGuidePlots=False|NoRegularPolygons=False|NumberOfDecimals=4|NumberOfDecimals=4|OptimizeChangeLocationCommands=True|OptimizeChangeLocationCommands=True|OriginPosition=Absolute|Panelize=False|Plot.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean,16973830~1,16973832~1,16973834~1,16777217~1,16842751~1,16973835~1,16973833~1,16973831~1,16973837~1|PlotPositivePlaneLayers=False|PlotUsedDrillDrawingLayerPairs=False|PlotUsedDrillGuideLayerPairs=False|PlusApertureTolerance=40|PlusApertureTolerance=40|Record=GerberView|SoftwareArcs=False|Sorted=False|Sorted=False
+Configuration3_Name6=PCBDocument
+Configuration3_Item6=FileName=ESC.PcbDoc
+Configuration3_Name7=SortOrder
+Configuration3_Item7=Designator=Up|Comment=Up|Footprint=Up
+Configuration3_Name8=VisibleOrder
+Configuration3_Item8=Comment=85|Description=137|Designator=187|Footprint=72|Quantity=36|Layer=36|Manufacturer=36|PartNumber=36|Technology=31
 OutputType4=Schematic Print
 OutputName4=Schematic Prints
 OutputCategory4=Documentation
@@ -123,7 +135,7 @@ PcbPrintPreferences5=SubsititueFont_Default=True|SubsititueFont_Serif=True|Subsi
 [PublishSettings]
 OutputFilePath2=\\vmware-host\Shared Folders\Documents\resc-hardware\ESC\Project Outputs for ESC\
 ReleaseManaged2=1
-OutputBasePath2=Project Outputs for ESC
+OutputBasePath2=Project Outputs for rESC
 OutputPathMedia2=
 OutputPathMediaValue2=
 OutputPathOutputer2=[Output Type]
@@ -136,7 +148,7 @@ OutputFileNameSpecial2=
 OpenOutput2=1
 OutputFilePath3=\\vmware-host\Shared Folders\Documents\Projects\rESC\ESC\Project Outputs for ESC\.PDF
 ReleaseManaged3=1
-OutputBasePath3=Project Outputs for ESC
+OutputBasePath3=Project Outputs for rESC
 OutputPathMedia3=
 OutputPathMediaValue3=
 OutputPathOutputer3=[Output Type]

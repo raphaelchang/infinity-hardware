@@ -1,9 +1,0 @@
-Removed Pin From Net: NetName=VCC Pin=C2-1
-Removed Pin From Net: NetName=GND Pin=C2-2
-Change Component Footprint: Designator=C2 Old Footprint=AVX-CAPC7343_V New Footprint=CAPC0402(1005)60_L
-Change Component Footprint: Designator=C1 Old Footprint=CAPC0402(1005)60_L New Footprint=CAPC0402(1005)60_M
-Change Component Footprint: Designator=JP1 Old Footprint=JST-8-PTH New Footprint=JST-8-SMD
-Change Component Comment : Designator=C2 Old Comment=100uF New Comment=1uF
-Added Pin To Net: NetName=GND Pin=C2-1
-Added Pin To Net: NetName=VCC Pin=C2-2
-Change Class Name : Old Net Name=Encoder New Net Name=AS5147

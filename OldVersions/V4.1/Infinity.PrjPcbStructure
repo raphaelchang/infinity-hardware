@@ -1,0 +1,6 @@
+Record=TopLevelDocument|FileName=ESC.SchDoc
+Record=SheetSymbol|SourceDocument=ESC.SchDoc|Designator=U_3V3|SchDesignator=U_3V3|FileName=3V3.SchDoc|SymbolType=Normal|RawFileName=3V3.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=ESC.SchDoc|Designator=U_12V|SchDesignator=U_12V|FileName=12V.SchDoc|SymbolType=Normal|RawFileName=12V.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=ESC.SchDoc|Designator=U_Connectors|SchDesignator=U_Connectors|FileName=Connectors.SchDoc|SymbolType=Normal|RawFileName=Connectors.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=ESC.SchDoc|Designator=U_MCU|SchDesignator=U_MCU|FileName=MCU.SchDoc|SymbolType=Normal|RawFileName=MCU.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=ESC.SchDoc|Designator=U_Power|SchDesignator=U_Power|FileName=Power.SchDoc|SymbolType=Normal|RawFileName=Power.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
