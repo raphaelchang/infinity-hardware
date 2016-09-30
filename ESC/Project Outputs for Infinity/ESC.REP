@@ -1,0 +1,124 @@
+*************************************************************
+FileName = ESC.PcbDoc
+ODB++ directory structure
+*************************************************************
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\matrix\matrix
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\profile
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\stephdr
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\topoverlay\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\topoverlay\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\toppaste\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\toppaste\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\topsolder\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\topsolder\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\top\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\top\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\plane1\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\plane1\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\plane2\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\plane2\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\bottom\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\bottom\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\bottomsolder\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\bottomsolder\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\bottompaste\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\bottompaste\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\bottomoverlay\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\bottomoverlay\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\drill\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\drill\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\drill\tools
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\drillguide\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\drillguide\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\keepout\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\keepout\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\mechanical1\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\mechanical1\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\mechanical2\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\mechanical2\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\mechanical3\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\mechanical3\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\mechanical4\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\mechanical4\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\mechanical13\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\mechanical13\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\mechanical15\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\mechanical15\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\mechanical16\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\mechanical16\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\drilldrawing\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\drilldrawing\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\multilayer\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\multilayer\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\1\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\1\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\2\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\2\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\3\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\3\attrlist
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\comp_+_top\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\comp_+_top\components
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\comp_+_bot\features
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\layers\comp_+_bot\components
+
+Generated File : \\vmware-host\Shared Folders\Documents\Projects\infinity-esc\infinity-hardware\ESC\Project Outputs for Infinity\odb\steps\pcb\eda\data
+
